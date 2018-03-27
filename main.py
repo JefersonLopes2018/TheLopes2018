@@ -18,7 +18,7 @@ def toint(s):
     except ValueError:
         return float(s)
 
-
+client = discord.Client()
 
 
 
