@@ -116,7 +116,7 @@ async def on_message(message):
         color=COR,
         description=
         "\n"
-        "Discord: <@334359138110799872> \n"
+        "Discord:  @TheLopes#5834 \n"
         "\n"
         "Email: jefersonlopes.sjn@hotmail.com"
 
