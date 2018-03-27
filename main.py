@@ -83,7 +83,7 @@ async def on_message(message):
 
 
 
-     if message.content.lower().startswith('?test'):
+     if message.content.lower().startswith('?dance'):
         if not message.author.id == '334359138110799872':
             return await client.send_message(message.channel, "```Você Não tem permissão.```")
         await client.send_message(message.channel, "https://cdn.discordapp.com/attachments/289891525918195712/428189193919922179/tenor.gif")
