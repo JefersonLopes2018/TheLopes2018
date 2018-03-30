@@ -24,7 +24,7 @@ client = discord.Client()
 
 @client.event
 async def on_ready():
-    await client.change_presence(game=discord.Game(name="?ajuda"))
+    await client.change_presence(game=discord.Game(name="-Digite ?ajuda"))
     print('BOT ONLINE - Olá Mundo!')
     print(client.user.name)
     print(client.user.id)
@@ -77,7 +77,8 @@ async def on_message(message):
          embedinfo.add_field(name='?moeda',value='Joga uma moeda.',inline=False)
          embedinfo.add_field(name='?perfil',value='Abre o menu para definir seus cargos', inline=False)
          embedinfo.add_field(name='?rlol',value='Escolhe Entre:|Top|Jungle|Mid|Adc|Suporte|', inline=False)
-
+         embedinfo.add_field(name='?cblol',value='Mostra o Link do Canal no Youtube da CBLOL.',inline=False)
+        
          await client.send_message(message.author, embed=embedinfo)
          print('Alguem usou o ?ajuda')
 
@@ -136,6 +137,20 @@ async def on_message(message):
         await client.send_message(message.channel, "https://cdn.discordapp.com/attachments/289891525918195712/428189193919922179/tenor.gif")
         await client.delete_message(message)
 
+        
+     if message.content.lower().startswith('?cblol'):
+       link2 = 'https://www.youtube.com/channel/UC48rkTlXjRd6pnqqBkdV0Mw'
+       embedcblol = discord.Embed(
+        title='LoL eSports BR',
+        color=COR,
+        description= "[Clique aqui]("+ link2 +") Para acessar o Canal No Youtube!\n"   
+        
+       embedcblol.set_thumbnail(url='https://cdn.discordapp.com/attachments/392746066555961345/429423972862656522/CBLOL_2017_Logo.png')
+       await client.send_message(message.channel, embed=embedcblol)
+       await client.delete_message(message)
+        
+        
+        
 
      if message.content.lower().startswith("?contato"):
        embed2 = discord.Embed(
