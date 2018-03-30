@@ -111,7 +111,7 @@ async def on_message(message):
                  'Digite **?perfil**\n'
          ' \n'
          ' \n'
-          '**OBS:** Esse comando só funciona pra quem já fez o cadastro.,)
+          '**OBS:** Esse comando só funciona pra quem já fez o cadastro.',)
 
         embed510.set_thumbnail(
           url='https://cdn.discordapp.com/attachments/392746066555961345/429135327274336266/0f3ed952323519.5608d8fce47b2.png')
