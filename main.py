@@ -257,7 +257,7 @@ async def on_message(message):
              description='\n'
                          '\n')
          embedlol.set_thumbnail(
-             url='https://cdn.discordapp.com/attachments/392746066555961345/428026548860485633/resize.png')
+             url='https://cdn.discordapp.com/attachments/392746066555961345/429129366291873814/resize.png')
 
          embedlol.add_field(name='Unranked', value='<:Unranked:428031343918710794>', inline=True)
          embedlol.add_field(name='Top', value='<:top:428031683544219671>', inline=True)
