@@ -103,7 +103,7 @@ async def on_message(message):
          url='https://cdn.discordapp.com/attachments/392746066555961345/429135327274336266/0f3ed952323519.5608d8fce47b2.png')
       await client.send_message(message.channel, embed=embed50)
         
-      if message.content.lower().startswith('?midiaperf'):
+      if message.content.lower().startswith('?midiaperfil'):
         embed510 = discord.Embed(
         title='-Escolha seus Cargos!',
         color=COR,
@@ -112,7 +112,6 @@ async def on_message(message):
          ' \n'
          ' \n'
           '**OBS:** Esse comando só funciona pra quem já fez o cadastro.',)
-
         embed510.set_thumbnail(
           url='https://cdn.discordapp.com/attachments/392746066555961345/429135327274336266/0f3ed952323519.5608d8fce47b2.png')
         await client.send_message(message.channel, embed=embed510)
@@ -222,6 +221,26 @@ async def on_message(message):
        await client.send_message(avisos, msgvr)
        await client.delete_message(message)
 
+        
+        
+     if message.content.lower().startswith('?rlol'):
+        choice = random.randint(1, 9)
+        if choice == 1:
+            await client.send_message(message.channel, '```Top```')
+        if choice == 2:
+            await client.send_message(message.channel,
+                                      ' ```Jungle``` ')
+        if choice == 3:
+            await client.send_message(message.channel,
+                                      ' ```Mid``` ')
+        if choice == 4:
+            await client.send_message(message.channel,
+                                      ' ```Adc``` ')
+        if choice == 5:
+            await client.send_message(message.channel, ' ```Suporte``` ') 
+        
+        
+        
 
      if message.content.lower().startswith('?cadastro'):
       link= 'https://discord.gg/43Zf9XK'
