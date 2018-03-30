@@ -188,7 +188,7 @@ async def on_message(message):
                     "\n"
                     "**Jogo**: GTA 5| FORTNITE| LOL",)
         await client.send_message(message.channel, embed=embed0001)
-        
+        embed0001.set_thumbnail(url='https://cdn.discordapp.com/attachments/392746066555961345/429160893377544203/Coroa-Dourada-16.png')
 
         msg2 = await client.wait_for_message(author=message.author, content='0002')
         embed0002 = discord.Embed(
