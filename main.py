@@ -224,18 +224,15 @@ async def on_message(message):
         
         
      if message.content.lower().startswith('?rlol'):
-        choice = random.randint(1, 9)
+        choice = random.randint(1, 5)
         if choice == 1:
             await client.send_message(message.channel, '```Top```')
         if choice == 2:
-            await client.send_message(message.channel,
-                                      ' ```Jungle``` ')
+            await client.send_message(message.channel, ' ```Jungle``` ')
         if choice == 3:
-            await client.send_message(message.channel,
-                                      ' ```Mid``` ')
+            await client.send_message(message.channel,' ```Mid``` ')
         if choice == 4:
-            await client.send_message(message.channel,
-                                      ' ```Adc``` ')
+            await client.send_message(message.channel,' ```Adc``` ')
         if choice == 5:
             await client.send_message(message.channel, ' ```Suporte``` ') 
         
