@@ -84,12 +84,24 @@ async def on_message(message):
 
 
      if message.content.lower().startswith('?dance'):
-        if not message.author.id == '334359138110799872':
-            return await client.send_message(message.channel, "```Você Não tem permissão.```")
+   
+     
         await client.send_message(message.channel, "https://cdn.discordapp.com/attachments/289891525918195712/428189193919922179/tenor.gif")
         await client.delete_message(message)
 
+     if message.content.lower().startswith('!midiacad'):
+      embed50 = discord.Embed(
+      title='Realize o Cadastro.',
+      color=COR,
+      description=
+                 'Para ter acesso as salas de jogos.\n',)
 
+      embed50.set_thumbnail(
+         url='https://cdn.discordapp.com/attachments/392746066555961345/429135327274336266/0f3ed952323519.5608d8fce47b2.png')
+      await client.send_message(message.channel, embed=embed50)
+        
+        
+        
      if message.content.lower().startswith('?avatar'):
         avatarembed = discord.Embed(
             title="",
@@ -104,7 +116,7 @@ async def on_message(message):
 
 
      if message.content.lower().startswith('?jarvis'):
-        msgjarvis= 'Olá {}, Estou Aqui!'.format(message.author.mention)
+        msgjarvis= 'Olá {}, Cheguei!'.format(message.author.mention)
         await client.send_message(message.channel, msgjarvis)
         await client.delete_message(message)
 
@@ -161,7 +173,7 @@ async def on_message(message):
                     "\n"
                     "**Jogo**: GTA 5| FORTNITE| LOL",)
         await client.send_message(message.channel, embed=embed0001)
-
+        
 
         msg2 = await client.wait_for_message(author=message.author, content='0002')
         embed0002 = discord.Embed(
@@ -291,7 +303,7 @@ async def on_message(message):
 
      if message.content.lower().startswith("?perfil"):
         if not message.author.id == '334359138110799872'and '335531697858674688':
-             return await client.send_message(message.channel, "```Você Não tem permissão.```")
+             return await client.send_message(message.channel, "```Faça nosso Cadastro para ter acesso as salas de Jogos.```")
         embed1 =discord.Embed(
 
            title="Defina seu Perfil!",
