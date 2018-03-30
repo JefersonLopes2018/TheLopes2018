@@ -76,7 +76,7 @@ async def on_message(message):
          embedinfo.add_field(name='?convite',value='Mostra o convite do F SOCIETY', inline=False)
          embedinfo.add_field(name='?moeda',value='Joga uma moeda.',inline=False)
          embedinfo.add_field(name='?perfil',value='Abre o menu para definir seus cargos', inline=False)
-
+         embedinfo.add_field(name='?rlol',value='Escolhe Entre:|Top|Jungle|Mid|Adc|Suporte|', inline=False)
 
          await client.send_message(message.author, embed=embedinfo)
          print('Alguem usou o ?ajuda')
