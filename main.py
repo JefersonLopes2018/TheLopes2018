@@ -1,8 +1,6 @@
 import discord
 import asyncio
 import random
-
-
 import re
 
 COR = 0x690FC3
