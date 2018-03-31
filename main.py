@@ -248,7 +248,7 @@ async def on_message(message):
         
 
      if message.content.lower().startswith('?cadastro'):
-      link= 'https://discord.gg/43Zf9XK'
+      link= 'https://discord.gg/RXNTwcW'
 
       embed3 = discord.Embed(
             title="Realização do Cadastro do server **F SOCIETY**",
@@ -290,7 +290,7 @@ async def on_message(message):
 
 
      if message.content.lower().startswith('?convite'):
-      await client.send_message(message.channel,"https://discord.gg/43Zf9XK")
+      await client.send_message(message.channel,"https://discord.gg/RXNTwcW")
       await client.delete_message(message)
 
      if message.content.lower().startswith('?moeda'):
