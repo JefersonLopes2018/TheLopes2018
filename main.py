@@ -145,7 +145,7 @@ async def on_message(message):
         color=COR,
         description= "[Clique aqui]("+ link2 +") Para acessar o Canal No Youtube!\n"   
         
-       embedcblol.set_thumbnail(url='https://cdn.discordapp.com/attachments/392746066555961345/429423972862656522/CBLOL_2017_Logo.png')
+      
       await client.send_message(message.channel, embed=embedcblol)
       await client.delete_message(message)
         
