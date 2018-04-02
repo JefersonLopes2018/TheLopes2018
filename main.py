@@ -342,8 +342,7 @@ async def on_message(message):
 
 
      if message.content.lower().startswith("?perfil"):
-        if not message.author.id == '334359138110799872'and '335531697858674688':
-             return await client.send_message(message.channel, "```Faça nosso Cadastro para ter acesso as salas de Jogos.```")
+        
         embed1 =discord.Embed(
 
            title="Defina seu Perfil!",
