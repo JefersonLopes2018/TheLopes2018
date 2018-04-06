@@ -76,9 +76,11 @@ async def on_message(message):
          embedinfo.add_field(name='?perfil',value='Abre o menu para definir seus cargos', inline=False)
          embedinfo.add_field(name='?rlol',value='Escolhe Entre:|Top|Jungle|Mid|Adc|Suporte|', inline=False)
          embedinfo.add_field(name='?cblol',value='Mostra o Link do Canal no Youtube da CBLOL.',inline=False)
-        
-         await client.send_message(message.author, embed=embedinfo)
+         embedinfo.set_footer(text="-Digite ok para receber a lista no privado.")
+         await client.send_message(message.channel, embed=embedinfo)
          await client.add_reaction(message, '😄')
+         msg1 = await client.wait_for_message(author=message.author, content='ok')
+         await client.send_message(message.author, embed=embedinfo)
          print('Alguem usou o ?ajuda')
 
 
