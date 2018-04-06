@@ -172,7 +172,7 @@ async def on_message(message):
          color=COR,
          description= "[Clique aqui]("+ link2 +") Para acessar o Canal No Youtube!\n")   
         
-        embedcblol.set_thumbnail(url='https://cdn.discordapp.com/attachments/392746066555961345/429423972862656522/CBLOL_2017_Logo.png')
+        embedcblol.set_thumbnail(url='https://cdn.discordapp.com/attachments/425141386266935296/431610785207418901/CBLOL_2017_Logo.png')
         await client.send_message(message.channel, embed=embedcblol)
         await client.delete_message(message)
 
@@ -309,7 +309,7 @@ async def on_message(message):
              description='\n'
                          '\n')
          embedlol.set_thumbnail(
-             url='https://cdn.discordapp.com/attachments/392746066555961345/429129366291873814/resize.png')
+             url='https://cdn.discordapp.com/attachments/425141386266935296/431610564448354316/resize.png')
 
          embedlol.add_field(name='Unranked', value='<:Unranked:428031343918710794>', inline=True)
          embedlol.add_field(name='Top', value='<:top:428031683544219671>', inline=True)
