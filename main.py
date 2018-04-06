@@ -22,7 +22,7 @@ client = discord.Client()
 
 @client.event
 async def on_ready():
-    await client.change_presence(game=discord.Game(name="-Digite ?ajuda"))
+    await client.change_presence(game=discord.Game(name="?ajuda"))
     print('BOT ONLINE - Olá Mundo!')
     print(client.user.name)
     print(client.user.id)
