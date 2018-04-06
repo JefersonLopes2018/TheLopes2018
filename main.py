@@ -151,7 +151,6 @@ async def on_message(message):
          ,)
        embed2.set_image(url=message.author.avatar_url)
        botmsg = await client.send_message(message.author, embed=embed2)
-       await client.delete_message(message)
        await client.add_reaction(message, '☎️')
 
      elif message.content.lower().startswith('?diz'):
