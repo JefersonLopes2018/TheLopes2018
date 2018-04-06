@@ -66,6 +66,7 @@ async def on_message(message):
          embedinfo.set_thumbnail(url='https://cdn.discordapp.com/avatars/423738913878966283/3eae6e8f5be338604dbf4a21ad96a34c.webp?size=1024')
 
          embedinfo.add_field(name='?avatar',value='Mostra o seu avatar', inline=False)
+         embedinfo.add_field(name='t?avatar *@user*',value='Mostra o avatar do user.', inline=False)
          embedinfo.add_field(name='?jarvis',value='Chama o BOT', inline=False)
          embedinfo.add_field(name='?contato',value='Envia o contato do programador', inline=False)
          embedinfo.add_field(name='?cadastro',value='Abre o menu de cadastro', inline=False)
@@ -131,6 +132,32 @@ async def on_message(message):
         await client.delete_message(message)
 
 
+     if message.content.lower().startswith('t?avatar'):
+        try:
+            embederro = discord.Embed(
+                title='Erro',
+                color=COR,
+                description='Este nick não existe ou saiu do servidor',
+            )
+            embederro.set_thumbnail(url=client.user.avatar_url)
+            user = message.mentions[0]
+
+            avatarembed = discord.Embed(
+                title="",
+                color=COR,
+                description='Aqui está o avatar de **{}**! '.format(user.name),
+            )
+
+            avatarembed.set_image(url=user.avatar_url)
+            botmsg = await client.send_message(message.channel, embed=avatarembed)
+
+        except IndexError:
+            await client.send_message(message.channel, embed=embederro)
+        except:
+            await client.send_message(message.channel, embed=embederro)
+        finally:
+            pass
+        
 
      if message.content.lower().startswith('?jarvis'):
         msgjarvis= 'Olá {}, Cheguei!'.format(message.author.mention)
