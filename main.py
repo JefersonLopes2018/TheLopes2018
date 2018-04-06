@@ -78,6 +78,7 @@ async def on_message(message):
          embedinfo.add_field(name='?cblol',value='Mostra o Link do Canal no Youtube da CBLOL.',inline=False)
         
          await client.send_message(message.author, embed=embedinfo)
+         await client.add_reaction(message, '😄')
          print('Alguem usou o ?ajuda')
 
 
@@ -102,7 +103,7 @@ async def on_message(message):
          url='https://cdn.discordapp.com/attachments/392746066555961345/429135327274336266/0f3ed952323519.5608d8fce47b2.png')
       await client.send_message(message.channel, embed=embed50)
         
-      if message.content.lower().startswith('?midiaperfil'):
+      if message.content.lower().startswith('?mperfil'):
         embed510 = discord.Embed(
         title='-Escolha seus Cargos!',
         color=COR,
@@ -151,7 +152,7 @@ async def on_message(message):
        embed2.set_image(url=message.author.avatar_url)
        botmsg = await client.send_message(message.author, embed=embed2)
        await client.delete_message(message)
-
+       await client.add_reaction(message, '☎️')
 
      elif message.content.lower().startswith('?diz'):
        if not message.author.id == '334359138110799872':
