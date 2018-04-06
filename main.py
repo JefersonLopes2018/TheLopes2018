@@ -63,7 +63,7 @@ async def on_message(message):
              description='\n'
                          '\n'
          )
-         embedinfo.set_thumbnail(url='https://cdn.discordapp.com/attachments/425891735059824673/426953764084383755/J.A.R.V.I.S._Rank_5_Icon.png')
+         embedinfo.set_thumbnail(url='https://cdn.discordapp.com/avatars/423738913878966283/3eae6e8f5be338604dbf4a21ad96a34c.webp?size=1024')
 
          embedinfo.add_field(name='?avatar',value='Mostra o seu avatar', inline=False)
          embedinfo.add_field(name='?jarvis',value='Chama o BOT', inline=False)
