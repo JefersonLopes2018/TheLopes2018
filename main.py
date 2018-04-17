@@ -101,11 +101,9 @@ async def on_message(message):
          ' \n'
          ' \n'
           '-Digite **?cadastro**',)
-
-      embed50.set_thumbnail(
-         url='https://cdn.discordapp.com/attachments/392746066555961345/429135327274336266/0f3ed952323519.5608d8fce47b2.png')
+         
       await client.send_message(message.channel, embed=embed50)
-      await client.add_reaction(message, '👩‍💻')  
+      await client.add_reaction(message, '📑')  
         
       
        
@@ -203,7 +201,7 @@ async def on_message(message):
         await client.send_message(message.channel, '```Digite seu numero de Registro.```')
 
         msg1 = await client.wait_for_message(author=message.author, content='001')
-        embed0001.set_thumbnail(url='https://cdn.discordapp.com/attachments/392746066555961345/429160893377544203/Coroa-Dourada-16.png')
+    
         embed001= discord.Embed(
 
            title="",
