@@ -79,9 +79,9 @@ async def on_message(message):
          embedinfo.add_field(name='?cblol',value='Mostra o Link do Canal no Youtube da CBLOL.',inline=False)
          embedinfo.set_footer(text="-Digite ok para receber a lista no privado.")
          await client.send_message(message.channel, embed=embedinfo)
-         await client.add_reaction(message, '😄')
          msg1 = await client.wait_for_message(author=message.author, content='ok')
          await client.send_message(message.author, embed=embedinfo)
+         await client.add_reaction(message, '😄')
          print('Alguem usou o ?ajuda')
 
 
