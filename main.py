@@ -199,7 +199,7 @@ async def on_message(message):
         await client.delete_message(message)
 
      
-      if message.content.lower().startswith('?relist'):
+     if message.content.lower().startswith('?relist'):
 
        embedlist= discord.Embed(
         title='Lista de Registrados',
