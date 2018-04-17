@@ -79,9 +79,9 @@ async def on_message(message):
          embedinfo.add_field(name='?cblol',value='Mostra o Link do Canal no Youtube da CBLOL.',inline=False)
          embedinfo.set_footer(text="-Digite ok para receber a lista no privado.")
          await client.send_message(message.channel, embed=embedinfo)
+         await client.add_reaction(message, '😄')
          msg1 = await client.wait_for_message(author=message.author, content='ok')
          await client.send_message(message.author, embed=embedinfo)
-         await client.add_reaction(message, '😄')
          print('Alguem usou o ?ajuda')
 
 
@@ -203,7 +203,7 @@ async def on_message(message):
         await client.send_message(message.channel, '```Digite seu numero de Registro.```')
 
         msg1 = await client.wait_for_message(author=message.author, content='001')
-
+        embed0001.set_thumbnail(url='https://cdn.discordapp.com/attachments/392746066555961345/429160893377544203/Coroa-Dourada-16.png')
         embed001= discord.Embed(
 
            title="",
@@ -219,7 +219,7 @@ async def on_message(message):
                     "\n"
                     "**Jogo**: GTA 5| FORTNITE| LOL",)
         await client.send_message(message.channel, embed=embed001)
-        embed0001.set_thumbnail(url='https://cdn.discordapp.com/attachments/392746066555961345/429160893377544203/Coroa-Dourada-16.png')
+        
 
         msg2 = await client.wait_for_message(author=message.author, content='002')
         embed002 = discord.Embed(
@@ -238,22 +238,7 @@ async def on_message(message):
             "**Jogo**: GTA 5", )
         await client.send_message(message.channel, embed=embed002)
         
-        msg3 = await client.wait_for_message(author=message.author, content='003')
-        embed003 = discord.Embed(
-
-            title="",
-            color=COR,
-            description=
-            "**Nome**: \n"
-            "\n"
-            "**Email**: _ \n"
-            "\n"
-            "**Nome Online**: \n"
-            "\n"
-            "**Plataforma**: \n"
-            "\n"
-            "**Jogo**: ", )
-        await client.send_message(message.channel, "```Registro invalido```")
+       
 
 
      elif message.content.lower().startswith('?rv'):
