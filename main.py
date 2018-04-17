@@ -72,6 +72,7 @@ async def on_message(message):
          embedinfo.add_field(name='?cadastro',value='Abre o menu de cadastro', inline=False)
          embedinfo.add_field(name='?enviardados', value='Envie Dados ao BOT', inline=False)
          embedinfo.add_field(name='?registro',value='Abre o menu de registro', inline=False)
+         embedinfo.add_field(name='?relist',value='Mostra a lista de usuarios registrados', inline=False)
          embedinfo.add_field(name='?convite',value='Mostra o convite do F SOCIETY', inline=False)
          embedinfo.add_field(name='?moeda',value='Joga uma moeda.',inline=False)
          embedinfo.add_field(name='?perfil',value='Abre o menu para definir seus cargos', inline=False)
@@ -198,7 +199,20 @@ async def on_message(message):
         await client.delete_message(message)
 
      
-    
+      if message.content.lower().startswith('?relist'):
+
+       embedlist= discord.Embed(
+        title='Lista de Registrados',
+        color=COR,
+        description='**001**: Jeferson Lopes\n'
+                   '**002**: Anthony Almeida'
+                   '\n'
+                   '\n'
+                   '-Digite ** `` ?cadastro `` ** para entrar nos registros do <@423738913878966283>')
+
+       embedlist.set_thumbnail(url='https://cdn.discordapp.com/attachments/425141386266935296/435928628908523520/book_stack_pc_1600_clr_3258.png')
+       await client.send_message(message.channel, embed=embedlist)
+
     
      if message.content.lower().startswith('?registro'):
 
