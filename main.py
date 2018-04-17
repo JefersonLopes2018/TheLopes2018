@@ -177,7 +177,7 @@ async def on_message(message):
        await client.delete_message(message)
 
         
-     elif message.content.lower().startswith('?dizavisos'):
+     elif message.content.lower().startswith('?avisos'):
        avisos= client.get_channel("392711722172940298")
        if not message.author.id == '334359138110799872':
            return await client.send_message(message.channel, "```Você Não tem permissão!```")
