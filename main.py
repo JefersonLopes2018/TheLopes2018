@@ -92,12 +92,12 @@ async def on_message(message):
         await client.send_message(message.channel, "https://cdn.discordapp.com/attachments/289891525918195712/428189193919922179/tenor.gif")
         await client.delete_message(message)
 
-     if message.content.lower().startswith('?midiacad'):
+     if message.content.lower().startswith('?cadinfo'):
       embed50 = discord.Embed(
       title='Realize o Cadastro.',
       color=COR,
       description=
-                 'Para ter acesso as salas de jogos.\n'
+                 '-Para ter Seu Registro no Banco de dados do <@423738913878966283>.\n'
          ' \n'
          ' \n'
           '-Digite **?cadastro**',)
@@ -105,21 +105,10 @@ async def on_message(message):
       embed50.set_thumbnail(
          url='https://cdn.discordapp.com/attachments/392746066555961345/429135327274336266/0f3ed952323519.5608d8fce47b2.png')
       await client.send_message(message.channel, embed=embed50)
+      await client.add_reaction(message, '👩‍💻')  
         
-      if message.content.lower().startswith('?mperfil'):
-        embed510 = discord.Embed(
-        title='-Escolha seus Cargos!',
-        color=COR,
-        description=
-                 'Digite **?perfil**\n'
-         ' \n'
-         ' \n'
-          '**OBS:** Esse comando só funciona pra quem já fez o cadastro.',)
-        embed510.set_thumbnail(
-          url='https://cdn.discordapp.com/attachments/392746066555961345/429135327274336266/0f3ed952323519.5608d8fce47b2.png')
-        await client.send_message(message.channel, embed=embed510)
-          
-        
+      
+       
      if message.content.lower().startswith('?avatar'):
         avatarembed = discord.Embed(
             title="",
@@ -165,6 +154,7 @@ async def on_message(message):
         await client.send_message(message.channel, "https://cdn.discordapp.com/attachments/289891525918195712/428189193919922179/tenor.gif")
         await client.delete_message(message)
 
+        
      if message.content.lower().startswith("?contato"):
        embed2 = discord.Embed(
 
@@ -180,7 +170,7 @@ async def on_message(message):
          ,)
        embed2.set_image(url=message.author.avatar_url)
        botmsg = await client.send_message(message.author, embed=embed2)
-       
+      
 
      elif message.content.lower().startswith('?diz'):
        if not message.author.id == '334359138110799872':
@@ -188,18 +178,22 @@ async def on_message(message):
        await client.send_message(message.channel, message.content[4:])
        await client.delete_message(message)
 
+        
      elif message.content.lower().startswith('?dizavisos'):
+       avisos= client.get_channel("392711722172940298")
        if not message.author.id == '334359138110799872':
            return await client.send_message(message.channel, "```Você Não tem permissão!```")
-       await client.send_message(message.channel, message.content[4:])
+       await client.send_message(avisos, message.content[4:])
        await client.delete_message(message)
 
+        
      if message.content.lower().startswith('?cblol'):
         link2 = 'https://www.youtube.com/channel/UC48rkTlXjRd6pnqqBkdV0Mw'
         embedcblol = discord.Embed(
          title='LoL eSports BR',
          color=COR,
-         description= "[Clique aqui]("+ link2 +") Para acessar o Canal No Youtube!\n")   
+         description= "\n"
+            "[Clique aqui]("+ link2 +") Para acessar o Canal No Youtube!\n")   
         
         embedcblol.set_thumbnail(url='https://cdn.discordapp.com/attachments/425141386266935296/431610785207418901/CBLOL_2017_Logo.png')
         await client.send_message(message.channel, embed=embedcblol)
@@ -208,9 +202,9 @@ async def on_message(message):
      if message.content.lower().startswith('?registro'):
         await client.send_message(message.channel, '```Digite seu numero de Registro.```')
 
-        msg1 = await client.wait_for_message(author=message.author, content='0001')
+        msg1 = await client.wait_for_message(author=message.author, content='001')
 
-        embed0001= discord.Embed(
+        embed001= discord.Embed(
 
            title="",
            color=COR,
@@ -224,11 +218,11 @@ async def on_message(message):
                     "**Plataforma**: PS3| PS4| PC\n"
                     "\n"
                     "**Jogo**: GTA 5| FORTNITE| LOL",)
-        await client.send_message(message.channel, embed=embed0001)
+        await client.send_message(message.channel, embed=embed001)
         embed0001.set_thumbnail(url='https://cdn.discordapp.com/attachments/392746066555961345/429160893377544203/Coroa-Dourada-16.png')
 
-        msg2 = await client.wait_for_message(author=message.author, content='0002')
-        embed0002 = discord.Embed(
+        msg2 = await client.wait_for_message(author=message.author, content='002')
+        embed002 = discord.Embed(
 
             title="",
             color=COR,
@@ -242,8 +236,24 @@ async def on_message(message):
             "**Plataforma**: PS3\n"
             "\n"
             "**Jogo**: GTA 5", )
-        await client.send_message(message.channel, embed=embed0002)
+        await client.send_message(message.channel, embed=embed002)
+        
+        msg3 = await client.wait_for_message(author=message.author, content='003')
+        embed003 = discord.Embed(
 
+            title="",
+            color=COR,
+            description=
+            "**Nome**: \n"
+            "\n"
+            "**Email**: _ \n"
+            "\n"
+            "**Nome Online**: \n"
+            "\n"
+            "**Plataforma**: \n"
+            "\n"
+            "**Jogo**: ", )
+          await client.send_message(message.channel, "```Registro invalido```")
 
 
      elif message.content.lower().startswith('?rv'):
@@ -255,7 +265,7 @@ async def on_message(message):
        msgvr= "-Digite ** `` ?perfil `` ** no canal {} para escolher seus cargos!".format(canalbots.mention)
        await client.send_message(avisos, message.content[3:])
 
-       await client.send_message(avisos, msgvr)
+       await client.send_message(message.author, msgvr)
        await client.delete_message(message)
 
         
@@ -329,7 +339,7 @@ async def on_message(message):
       if choice == 2:
          await client.add_reaction(message, '👑')
 
-     if message.content.lower().startswith("?lol"):
+     if message.content.lower().startswith("xlolx"):
          user = message.author
          server = message.server
          embedlol = discord.Embed(
