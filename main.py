@@ -197,35 +197,32 @@ async def on_message(message):
         await client.send_message(message.channel, embed=embedcblol)
         await client.delete_message(message)
 
-     if message.content.lower().startswith('?registro'):
-        await client.send_message(message.channel, '```Digite seu numero de Registro.```')
-
-        msg1 = await client.wait_for_message(author=message.author, content='001')
+     
     
-        embed001= discord.Embed(
+    
+     if message.content.lower().startswith('?registro'):
 
-           title="",
-           color=COR,
-           description=
-                    "**Nome**: Jeferson Lopes\n"
-                    "\n"
-                    "**Email**: jefersonlopes.sjn@hotmail.com\n"
-                    "\n"
-                    "**Nome Online**: TheLopes\n"
-                    "\n"
-                    "**Plataforma**: PS3| PS4| PC\n"
-                    "\n"
-                    "**Jogo**: GTA 5| FORTNITE| LOL",)
-        await client.send_message(message.channel, embed=embed001)
-        
-
-        msg2 = await client.wait_for_message(author=message.author, content='002')
-        embed002 = discord.Embed(
+        await client.send_message(message.channel, '```Digite seu numero de Registro.```')
+        embed001 = discord.Embed(
 
             title="",
             color=COR,
             description=
-            "**Nome**: Anthony \n"
+            "**Nome**: Jeferson Lopes\n"
+            "\n"
+            "**Email**: jefersonlopes.sjn@hotmail.com\n"
+            "\n"
+            "**Nome Online**: TheLopes\n"
+            "\n"
+            "**Plataforma**: PS3| PS4| PC\n"
+            "\n"
+            "**Jogo**: GTA 5| FORTNITE| LOL", )
+
+        embed002 = discord.Embed(
+
+            title="",
+            color=COR,
+            description="**Nome**: Anthony \n"
             "\n"
             "**Email**: _ \n"
             "\n"
@@ -234,9 +231,79 @@ async def on_message(message):
             "**Plataforma**: PS3\n"
             "\n"
             "**Jogo**: GTA 5", )
+
+        embed003 = discord.Embed(
+
+            title="Registro Invalido!",
+            color=COR,
+            description="")
+        embed004 = discord.Embed(
+
+            title="Registro Invalido!",
+            color=COR,
+            description="")
+
+        embed005 = discord.Embed(
+
+            title="Registro Invalido!",
+            color=COR,
+            description="")
+
+        embed006 = discord.Embed(
+
+            title="Registro Invalido!",
+            color=COR,
+            description="")
+
+        embed007 = discord.Embed(
+
+            title="Registro Invalido!",
+            color=COR,
+            description="")
+
+        embed008 = discord.Embed(
+
+            title="Registro Invalido!",
+            color=COR,
+            description="")
+
+        embed009 = discord.Embed(
+
+            title="Registro Invalido!",
+            color=COR,
+            description="")
+        embed010 = discord.Embed(
+
+            title="Registro Invalido!",
+            color=COR,
+            description="")
+
+
+        msg1 = await client.wait_for_message(author=message.author, content='001')
+        embed001.set_thumbnail(url='https://cdn.discordapp.com/avatars/334359138110799872/dade0c65f6252c9f264a53b31ea839b9.webp?size=1024')
+        await client.send_message(message.channel, embed=embed001)
+        msg2 = await client.wait_for_message(author=message.author, content='002')
+        embed002.set_thumbnail(url='https://cdn.discordapp.com/avatars/335531697858674688/28f47a3ce62ae9b3be26914e07311437.webp?size=1024')
         await client.send_message(message.channel, embed=embed002)
-        
-       
+        msg3 = await client.wait_for_message(author=message.author, content='003')
+        await client.send_message(message.channel, embed=embed003)
+        msg4 = await client.wait_for_message(author=message.author, content='004')
+        await client.send_message(message.channel, embed=embed004)
+        msg5 = await client.wait_for_message(author=message.author, content='005')
+        await client.send_message(message.channel, embed=embed005)
+        msg6 = await client.wait_for_message(author=message.author, content='006')
+        await client.send_message(message.channel, embed=embed006)
+        msg7 = await client.wait_for_message(author=message.author, content='007')
+        await client.send_message(message.channel, embed=embed007)
+        msg8 = await client.wait_for_message(author=message.author, content='008')
+        await client.send_message(message.channel, embed=embed008)
+        msg9 = await client.wait_for_message(author=message.author, content='009')
+        await client.send_message(message.channel, embed=embed009)
+        msg10 = await client.wait_for_message(author=message.author, content='010')
+        await client.send_message(message.channel, embed=embed010)
+
+
+
 
 
      elif message.content.lower().startswith('?rv'):
