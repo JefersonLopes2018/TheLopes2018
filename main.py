@@ -253,7 +253,7 @@ async def on_message(message):
             "**Plataforma**: \n"
             "\n"
             "**Jogo**: ", )
-          await client.send_message(message.channel, "```Registro invalido```")
+        await client.send_message(message.channel, "```Registro invalido```")
 
 
      elif message.content.lower().startswith('?rv'):
