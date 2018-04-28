@@ -455,11 +455,11 @@ async def on_message(message):
                     "🛡 - FORTNITE  \n"
                     "👦 - MEMBRO    ",)
         botmsg = await client.send_message(message.channel, embed=embed1)
-        await client.delete_message(message)
+        
         await client.add_reaction(botmsg, "🔫")
         await client.add_reaction(botmsg, "⚔")
         await client.add_reaction(botmsg, "🛡")
-        await client.add_reaction(botmsg, "👦")
+        
 
         global msg_id
         msg_id = botmsg.id
@@ -485,10 +485,7 @@ async def on_reaction_add(reaction, user):
      await client.add_roles(user, role)
      print("add")
 
-    if reaction.emoji == "👦" and msg.id == msg_id: #and user == msg_user:
-     role = discord.utils.find(lambda r: r.name == "Membro", msg.server.roles)
-     await client.add_roles(user, role)
-     print("add")
+   
 
 
 
@@ -512,10 +509,7 @@ async def on_reaction_remove(reaction, user):
      role = discord.utils.find(lambda r: r.name == "FORTNITE", msg.server.roles)
      await client.remove_roles(user,role)
 
-    if reaction.emoji == "👦" and msg.id == msg_id: #and user == msg_user:
-     role = discord.utils.find(lambda r: r.name == "Membro", msg.server.roles)
-     await client.remove_roles(user,role)
-     print("remove")
+    
 
 
 client.run('NDIzNzM4OTEzODc4OTY2Mjgz.DZw-vQ.C6c71fWztCIdQDvMTwxoI_Wvnb8')
