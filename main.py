@@ -452,8 +452,8 @@ async def on_message(message):
            color=COR,
            description="🔫 - GTA       \n"
                     "⚔ - LOL       \n"
-                    "🛡 - FORTNITE  \n"
-                    "👦 - MEMBRO    ",)
+                    "🛡 - FORTNITE  \n",)
+             
         botmsg = await client.send_message(message.channel, embed=embed1)
         
         await client.add_reaction(botmsg, "🔫")
