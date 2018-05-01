@@ -161,6 +161,7 @@ async def on_message(message):
         color=COR,
         description=
         "\n"
+        "WhatsAPP: (53) 9-9909-6291 \n"
         "Discord: <@334359138110799872> \n"
         "\n"
         "Email: jefersonlopes.sjn@hotmail.com"
