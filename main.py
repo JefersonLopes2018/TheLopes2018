@@ -295,7 +295,7 @@ async def on_message(message):
 
 
         msg1 = await client.wait_for_message(author=message.author, content='001')
-        embed001.set_thumbnail(url='https://cdn.discordapp.com/avatars/334359138110799872/dade0c65f6252c9f264a53b31ea839b9.webp?size=1024')
+        embed001.set_thumbnail(url='https://cdn.discordapp.com/avatars/334359138110799872/e9500cf1d03931f465dab3bcdf9eb527.webp?size=1024')
         await client.send_message(message.channel, embed=embed001)
         msg2 = await client.wait_for_message(author=message.author, content='002')
         embed002.set_thumbnail(url='https://cdn.discordapp.com/avatars/335531697858674688/28f47a3ce62ae9b3be26914e07311437.webp?size=1024')
