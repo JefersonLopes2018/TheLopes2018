@@ -65,7 +65,7 @@ async def on_message(message):
          )
          embedinfo.set_thumbnail(url='https://cdn.discordapp.com/avatars/423738913878966283/3eae6e8f5be338604dbf4a21ad96a34c.webp?size=1024')
 
-         embedinfo.add_field(name='🔷Comandos de interação',value='', inline=False)
+         embedinfo.add_field(name='🔷Comandos de interação',value='.', inline=False)
        
          embedinfo.add_field(name='?jarvis',value='Chama o BOT', inline=False)
          embedinfo.add_field(name='?avatar',value='Mostra o seu avatar', inline=False)
@@ -77,7 +77,7 @@ async def on_message(message):
          embedinfo.add_field(name='?moeda',value='Joga uma moeda.',inline=False)
          embedinfo.add_field(name='?convite',value='Mostra o convite do F SOCIETY', inline=False)
         
-         embedinfo.add_field(name='🔷Comandos de registros',value='', inline=False)
+         embedinfo.add_field(name='🔷Comandos de registros',value='.', inline=False)
         
          embedinfo.add_field(name='?perfil',value='Abre o menu para definir seus cargos', inline=False)
          embedinfo.add_field(name='?cadastro',value='Abre o menu de cadastro', inline=False)
@@ -132,6 +132,10 @@ async def on_message(message):
         
         
         
+        
+        
+        
+        
       #sistema_de_avatar
        
      if message.content.lower().startswith('?avatar'):
@@ -175,6 +179,9 @@ async def on_message(message):
 
         
         
+        
+        
+        
         #jarvis_online
         
      if message.content.lower().startswith('?jarvis'):
@@ -196,7 +203,7 @@ async def on_message(message):
         color=COR,
         description=
         "\n"
-        "WhatsAPP: (53) 9-9909-6291 \n"
+        "Whatsapp: (53) 9-9909-6291 \n"
         "Discord: <@334359138110799872> \n"
         "\n"
         "Email: jefersonlopes.sjn@hotmail.com"
@@ -277,6 +284,8 @@ async def on_message(message):
        embedlist.set_thumbnail(url='https://cdn.discordapp.com/attachments/425141386266935296/435928628908523520/book_stack_pc_1600_clr_3258.png')
        await client.send_message(message.channel, embed=embedlist)
 
+    
+    
     
      if message.content.lower().startswith('?registro'):
 
@@ -435,7 +444,7 @@ async def on_message(message):
          await client.send_message(canal, "<@334359138110799872>")
          await client.send_message(canal, message.content[12:])
          await client.send_message(message.channel, msgdados)
-         await client.delete_message(message)
+         await client.add_reaction(message, ':sim:444562578639945728') 
 
 
 
@@ -447,7 +456,7 @@ async def on_message(message):
 
      if message.content.lower().startswith('?convite'):
       await client.send_message(message.channel,"https://discord.gg/RXNTwcW")
-      await client.delete_message(message)
+      await client.add_reaction(😀)
 
         
      if message.content.lower().startswith('?moeda'):
@@ -478,7 +487,7 @@ async def on_message(message):
         await client.add_reaction(botmsg, "🔫")
         await client.add_reaction(botmsg, "⚔")
         await client.add_reaction(botmsg, "🛡")
-        await client.add_reaction(botmsg, "🍗")
+        
 
         global msg_id
         msg_id = botmsg.id
