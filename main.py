@@ -443,8 +443,8 @@ async def on_message(message):
 
          await client.send_message(canal, "<@334359138110799872>")
          await client.send_message(canal, message.content[12:])
-         hehe=await client.send_message(message.channel, msgdados)
-         await client.add_reaction(hehe, ':sim:444562578639945728') 
+         await client.send_message(message.channel, msgdados)
+         await client.add_reaction(message, ':sim:444562578639945728') 
 
 
 
