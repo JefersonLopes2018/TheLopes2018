@@ -444,7 +444,7 @@ async def on_message(message):
          await client.send_message(canal, "<@334359138110799872>")
          await client.send_message(canal, message.content[12:])
          await client.send_message(message.channel, msgdados)
-         await client.add_reaction(message, ':sim:444562578639945728') 
+         
 
 
 
