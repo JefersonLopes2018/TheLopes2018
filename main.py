@@ -87,20 +87,20 @@ async def on_message(message):
 
         #sistema_de_enquete
 
-    if message.channel == client.get_channel('445053480755789824'):
+     if message.channel == client.get_channel('445053480755789824'):
         await client.add_reaction(message, ":sim:444562578639945728")
         await client.add_reaction(message, ":nao:444562647799562261")
 
 
-    if message.content.lower().startswith("!enquete"):
+     if message.content.lower().startswith("!enquete"):
         menssagem = message.content[9:]
         canal = client.get_channel("")
 
         msg = await client.send_message(message.channel, menssagem)
 
-    await client.delete_message(message)
-    await client.add_reaction(msg, ':sim:444562578639945728')
-    await client.add_reaction(msg, ':nao:444562647799562261')
+     await client.delete_message(message)
+     await client.add_reaction(msg, ':sim:444562578639945728')
+     await client.add_reaction(msg, ':nao:444562647799562261')
 
      if message.content.lower().startswith('?dance'):
    
