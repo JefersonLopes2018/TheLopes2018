@@ -92,11 +92,11 @@ async def on_message(message):
         menssagem = message.content[9:]
         canal = client.get_channel("")
 
-        msg = await client.send_message(message.channel, menssagem)
+        resp = await client.send_message(message.channel, menssagem)
 
      
-     await client.add_reaction(msg, ':sim:444562578639945728')
-     await client.add_reaction(msg, ':nao:444562647799562261')
+     await client.add_reaction(resp, ':sim:444562578639945728')
+     await client.add_reaction(resp, ':nao:444562647799562261')
 
      if message.content.lower().startswith('?dance'):
    
