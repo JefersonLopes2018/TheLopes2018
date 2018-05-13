@@ -94,7 +94,7 @@ async def on_message(message):
 
         msg = await client.send_message(message.channel, menssagem)
 
-     await client.delete_message(message)
+     
      await client.add_reaction(msg, ':sim:444562578639945728')
      await client.add_reaction(msg, ':nao:444562647799562261')
 
