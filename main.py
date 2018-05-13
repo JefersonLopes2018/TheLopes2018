@@ -65,19 +65,27 @@ async def on_message(message):
          )
          embedinfo.set_thumbnail(url='https://cdn.discordapp.com/avatars/423738913878966283/3eae6e8f5be338604dbf4a21ad96a34c.webp?size=1024')
 
+         embedinfo.add_field(name='Comandos de interação',value=None, inline=False)
+       
+         embedinfo.add_field(name='?jarvis',value='Chama o BOT', inline=False)
          embedinfo.add_field(name='?avatar',value='Mostra o seu avatar', inline=False)
          embedinfo.add_field(name='t?avatar *@user*',value='Mostra o avatar do user.', inline=False)
-         embedinfo.add_field(name='?jarvis',value='Chama o BOT', inline=False)
+         embedinfo.add_field(name='?enquete',value='Cria uma enquete', inline=False)
          embedinfo.add_field(name='?contato',value='Envia o contato do programador', inline=False)
+         embedinfo.add_field(name='?rlol',value='Escolhe Entre:|Top|Jungle|Mid|Adc|Suporte|', inline=False)
+         embedinfo.add_field(name='?cblol',value='Mostra o Link do Canal no Youtube da CBLOL.',inline=False)
+         embedinfo.add_field(name='?moeda',value='Joga uma moeda.',inline=False)
+         embedinfo.add_field(name='?convite',value='Mostra o convite do F SOCIETY', inline=False)
+        
+         embedinfo.add_field(name='Comandos de registros',value=None, inline=False)
+        
+         embedinfo.add_field(name='?perfil',value='Abre o menu para definir seus cargos', inline=False)
          embedinfo.add_field(name='?cadastro',value='Abre o menu de cadastro', inline=False)
          embedinfo.add_field(name='?enviardados', value='Envie Dados ao BOT', inline=False)
          embedinfo.add_field(name='?registro',value='Abre o menu de registro', inline=False)
          embedinfo.add_field(name='?relist',value='Mostra a lista de usuarios registrados', inline=False)
-         embedinfo.add_field(name='?convite',value='Mostra o convite do F SOCIETY', inline=False)
-         embedinfo.add_field(name='?moeda',value='Joga uma moeda.',inline=False)
-         embedinfo.add_field(name='?perfil',value='Abre o menu para definir seus cargos', inline=False)
-         embedinfo.add_field(name='?rlol',value='Escolhe Entre:|Top|Jungle|Mid|Adc|Suporte|', inline=False)
-         embedinfo.add_field(name='?cblol',value='Mostra o Link do Canal no Youtube da CBLOL.',inline=False)
+         
+      
          embedinfo.set_footer(text="-Digite ok para receber a lista no privado.")
          await client.send_message(message.channel, embed=embedinfo)
          await client.add_reaction(message, '😄')
@@ -85,10 +93,12 @@ async def on_message(message):
          await client.send_message(message.author, embed=embedinfo)
          print('Alguem usou o ?ajuda')
 
-        #sistema_de_enquete
+       
+    
+      #sistema_de_enquete
 
 
-     if message.content.lower().startswith("!enquete"):
+     if message.content.lower().startswith("?enquete"):
       menssagem = message.content[9:]
       msp = await client.send_message(message.channel, menssagem)
 
@@ -97,12 +107,16 @@ async def on_message(message):
       await client.add_reaction(msp, ':nao:444562647799562261')
    
 
+
+     #lixo
+    
      if message.content.lower().startswith('?dance'):
    
      
         await client.send_message(message.channel, "https://cdn.discordapp.com/attachments/289891525918195712/428189193919922179/tenor.gif")
         await client.delete_message(message)
 
+        
      if message.content.lower().startswith('?cadinfo'):
       embed50 = discord.Embed(
       title='Realize o Cadastro.',
@@ -116,7 +130,9 @@ async def on_message(message):
       await client.send_message(message.channel, embed=embed50)
       await client.add_reaction(message, '📑')  
         
-      
+        
+        
+      #sistema_de_avatar
        
      if message.content.lower().startswith('?avatar'):
         avatarembed = discord.Embed(
@@ -157,12 +173,21 @@ async def on_message(message):
             pass
         
 
+        
+        
+        #jarvis_online
+        
      if message.content.lower().startswith('?jarvis'):
         msgjarvis= 'Olá {}, Cheguei!'.format(message.author.mention)
         await client.send_message(message.channel, msgjarvis)
         await client.send_message(message.channel, "https://cdn.discordapp.com/attachments/289891525918195712/428189193919922179/tenor.gif")
         await client.delete_message(message)
 
+        
+        
+        
+        
+        #contato
         
      if message.content.lower().startswith("?contato"):
        embed2 = discord.Embed(
@@ -180,8 +205,14 @@ async def on_message(message):
          ,)
        embed2.set_image(url=message.author.avatar_url)
        botmsg = await client.send_message(message.author, embed=embed2)
-      
-
+     
+        
+        
+        
+        
+     #sistema_de_controle(mensagem)
+        
+        
      elif message.content.lower().startswith('?diz'):
        if not message.author.id == '334359138110799872':
            return await client.send_message(message.channel, "```Você Não tem permissão!```")
@@ -196,6 +227,11 @@ async def on_message(message):
        await client.send_message(avisos, message.content[8:])
        await client.delete_message(message)
 
+      
+        
+        
+        #lol
+        
         
      if message.content.lower().startswith('?cblol'):
         link2 = 'https://www.youtube.com/channel/UC48rkTlXjRd6pnqqBkdV0Mw'
@@ -209,7 +245,24 @@ async def on_message(message):
         await client.send_message(message.channel, embed=embedcblol)
         await client.delete_message(message)
 
-     
+            
+     if message.content.lower().startswith('?rlol'):
+        choice = random.randint(1, 5)
+        if choice == 1:
+            await client.send_message(message.channel, '```Top```')
+        if choice == 2:
+            await client.send_message(message.channel, ' ```Jungle``` ')
+        if choice == 3:
+            await client.send_message(message.channel,' ```Mid``` ')
+        if choice == 4:
+            await client.send_message(message.channel,' ```Adc``` ')
+        if choice == 5:
+            await client.send_message(message.channel, ' ```Suporte``` ') 
+        
+        
+        
+     #Banco_de_dados
+    
      if message.content.lower().startswith('?relist'):
 
        embedlist= discord.Embed(
@@ -343,24 +396,8 @@ async def on_message(message):
        await client.send_message(message.author, msgvr)
        await client.delete_message(message)
 
+                
         
-        
-     if message.content.lower().startswith('?rlol'):
-        choice = random.randint(1, 5)
-        if choice == 1:
-            await client.send_message(message.channel, '```Top```')
-        if choice == 2:
-            await client.send_message(message.channel, ' ```Jungle``` ')
-        if choice == 3:
-            await client.send_message(message.channel,' ```Mid``` ')
-        if choice == 4:
-            await client.send_message(message.channel,' ```Adc``` ')
-        if choice == 5:
-            await client.send_message(message.channel, ' ```Suporte``` ') 
-        
-        
-        
-
      if message.content.lower().startswith('?cadastro'):
       link= 'https://discord.gg/RXNTwcW'
 
@@ -402,11 +439,17 @@ async def on_message(message):
 
 
 
+            
+            
+            
+           
+        #interação
 
      if message.content.lower().startswith('?convite'):
       await client.send_message(message.channel,"https://discord.gg/RXNTwcW")
       await client.delete_message(message)
 
+        
      if message.content.lower().startswith('?moeda'):
       choice = random.randint(1,2)
       if choice == 1:
@@ -414,46 +457,10 @@ async def on_message(message):
       if choice == 2:
          await client.add_reaction(message, '👑')
 
-     if message.content.lower().startswith("xlolx"):
-         user = message.author
-         server = message.server
-         embedlol = discord.Embed(
-             title='Escolha Seu Elo e Lane',
-             color=COR,
-             description='\n'
-                         '\n')
-         embedlol.set_thumbnail(
-             url='https://cdn.discordapp.com/attachments/425141386266935296/431610564448354316/resize.png')
+            
+   
 
-         embedlol.add_field(name='Unranked', value='<:Unranked:428031343918710794>', inline=True)
-         embedlol.add_field(name='Top', value='<:top:428031683544219671>', inline=True)
-         embedlol.add_field(name='Bronze', value='<:bronze:428031523502030848>', inline=True)
-         embedlol.add_field(name='Jungle', value='<:jungle:428031580116877312>', inline=True)
-         embedlol.add_field(name='Prata', value='<:prata:428031631069282304>', inline=True)
-         embedlol.add_field(name='Mid', value='<:mid:428031598517288962>', inline=True)
-         embedlol.add_field(name='Ouro', value='<:ouro:428031561825386496>', inline=True)
-         embedlol.add_field(name='Adc', value='<:adc:428037272923930644>', inline=True)
-         embedlol.add_field(name='Platina', value='<:platina:428031671632134156>', inline=True)
-         embedlol.add_field(name='Suporte', value='<:suporte:428031644046458890>', inline=True)
-         embedlol.add_field(name='Diamante', value='<:diamante:428031544473550859>', inline=True)
-
-         botmsglol = await client.send_message(message.channel, embed=embedlol)
-
-         await client.add_reaction(botmsglol, ":Unranked:428031343918710794")
-         await client.add_reaction(botmsglol," :top:428031683544219671")
-         await client.add_reaction(botmsglol, ":bronze:428031523502030848 ")
-         await client.add_reaction(botmsglol, ":jungle:428031580116877312 ")
-         await client.add_reaction(botmsglol, " :prata:428031631069282304")
-         await client.add_reaction(botmsglol, ":mid:428031598517288962 ")
-         await client.add_reaction(botmsglol, ":ouro:428031561825386496 ")
-         await client.add_reaction(botmsglol, ":adc:428037272923930644 ")
-         await client.add_reaction(botmsglol, ":platina:428031671632134156 ")
-         await client.add_reaction(botmsglol, ":suporte:428031644046458890")
-         await client.add_reaction(botmsglol, ":diamante:428031544473550859")
-
-
-
-
+    #Sistema_de_cargos
 
      if message.content.lower().startswith("?perfil"):
         
