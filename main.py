@@ -65,7 +65,7 @@ async def on_message(message):
          )
          embedinfo.set_thumbnail(url='https://cdn.discordapp.com/avatars/423738913878966283/3eae6e8f5be338604dbf4a21ad96a34c.webp?size=1024')
 
-         embedinfo.add_field(name='Comandos de interação',value=None, inline=False)
+         embedinfo.add_field(name='🔷Comandos de interação',value=, inline=False)
        
          embedinfo.add_field(name='?jarvis',value='Chama o BOT', inline=False)
          embedinfo.add_field(name='?avatar',value='Mostra o seu avatar', inline=False)
@@ -77,7 +77,7 @@ async def on_message(message):
          embedinfo.add_field(name='?moeda',value='Joga uma moeda.',inline=False)
          embedinfo.add_field(name='?convite',value='Mostra o convite do F SOCIETY', inline=False)
         
-         embedinfo.add_field(name='Comandos de registros',value=None, inline=False)
+         embedinfo.add_field(name='🔷Comandos de registros',value=, inline=False)
         
          embedinfo.add_field(name='?perfil',value='Abre o menu para definir seus cargos', inline=False)
          embedinfo.add_field(name='?cadastro',value='Abre o menu de cadastro', inline=False)
