@@ -219,7 +219,19 @@ async def on_message(message):
         
      #sistema_de_controle(mensagem)
         
+     if message.content.lower().startswith('?diz'):
+       if not message.author.id == '334359138110799872':
+         return await client.send_message(message.channel, "```Você Não tem permissão!```")
+       await client.send_message(message.channel, message.content[4:])
+       await client.delete_message(message)
+
         
+     if message.content.lower().startswith('?avisos'):
+       avisos= client.get_channel("392711722172940298")
+       if not message.author.id == '334359138110799872':
+         return await client.send_message(message.channel, "```Você Não tem permissão!```")
+       await client.send_message(avisos, message.content[8:])
+       await client.delete_message(message)  
    
 
       
@@ -431,8 +443,8 @@ async def on_message(message):
 
          await client.send_message(canal, "<@334359138110799872>")
          await client.send_message(canal, message.content[12:])
-         evd = await client.send_message(message.channel, msgdados)
-         await client.add_reaction(evd, ':sim:444562578639945728')
+         await client.send_message(message.channel, msgdados)
+         await client.add_reaction(message, ':sim:444562578639945728')
 
 
 
