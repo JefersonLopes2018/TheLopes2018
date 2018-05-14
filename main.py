@@ -455,8 +455,9 @@ async def on_message(message):
         #interação
 
      if message.content.lower().startswith('?convite'):
-      await client.send_message(message.channel,"https://discord.gg/RXNTwcW")
-      await client.add_reaction(message, '😀')
+      convic = await client.send_message(message.channel,"https://discord.gg/RXNTwcW")
+      await client.delete_message(message)
+      await client.add_reaction(convic, '😀')
 
         
      if message.content.lower().startswith('?moeda'):
@@ -480,7 +481,7 @@ async def on_message(message):
            description="🔫 - GTA       \n"
                     "⚔ - LOL       \n"
                     "🛡 - FORTNITE  \n"
-                    "🍗 - COXINHA",)
+                    ,)
              
         botmsg = await client.send_message(message.channel, embed=embed1)
         
