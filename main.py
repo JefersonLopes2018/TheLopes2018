@@ -212,7 +212,7 @@ async def on_message(message):
          ,)
        embed2.set_image(url=message.author.avatar_url)
        botmsg = await client.send_message(message.author, embed=embed2)
-     
+       await client.add_reaction(message,'👊'
         
         
         
@@ -443,8 +443,8 @@ async def on_message(message):
 
          await client.send_message(canal, "<@334359138110799872>")
          await client.send_message(canal, message.content[12:])
-         await client.send_message(message.channel, msgdados)
-         
+         evd = await client.send_message(message.channel, msgdados)
+         await client.add_reaction(evd, ':sim:444562578639945728'
 
 
 
