@@ -456,7 +456,7 @@ async def on_message(message):
 
      if message.content.lower().startswith('?convite'):
       await client.send_message(message.channel,"https://discord.gg/RXNTwcW")
-      await client.add_reaction(😀)
+      await client.add_reaction(message, '😀')
 
         
      if message.content.lower().startswith('?moeda'):
