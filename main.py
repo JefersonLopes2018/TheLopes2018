@@ -184,7 +184,7 @@ async def on_message(message):
         
         #jarvis_online
         
-     if message.content.lower().startswith('?jarvis'):
+     if message.content.lower().startswith(''):
         msgjarvis= 'Olá {}, Cheguei!'.format(message.author.mention)
         await client.send_message(message.channel, msgjarvis)
         await client.send_message(message.channel, "https://cdn.discordapp.com/attachments/289891525918195712/428189193919922179/tenor.gif")
@@ -233,7 +233,13 @@ async def on_message(message):
        await client.send_message(avisos, message.content[8:])
        await client.delete_message(message)  
    
-
+     if message.content.lower().startswith('jarvis'):
+       staff = client.get_channel("425150435725279253")
+       sos = '<@334359138110799872> você foi solitado por {}'.format(message.author.mention)
+       javai = '{} Vou analisar sua duvida e lhe responder assim que possivel!'.format(message.author.mention)
+       await client.send_message(staff, sos)
+       await client.send_message(staff, message.content[7:])
+       await client.send_message(message.channel, javai)
       
         
         
