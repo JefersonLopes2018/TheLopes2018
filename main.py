@@ -184,7 +184,7 @@ async def on_message(message):
         
         #jarvis_online
         
-     if message.content.lower().startswith(''):
+     if message.content.lower().startswith('?erro'):
         msgjarvis= 'Olá {}, Cheguei!'.format(message.author.mention)
         await client.send_message(message.channel, msgjarvis)
         await client.send_message(message.channel, "https://cdn.discordapp.com/attachments/289891525918195712/428189193919922179/tenor.gif")
