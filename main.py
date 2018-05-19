@@ -476,75 +476,7 @@ async def on_message(message):
           
         
         
-        #COXINHANERD
-        
-      if message.content.lower().startswith('!menu'):
-        link= 'https://apoia.se/coxinhanerd'
-        embedpagina= discord.Embed(
-         title="Menu do Server",
-         color=COR,
-         description="1️⃣Cargos\n"
-                     "2️⃣Canais de Texto\n"
-                     "Sair",)   
-         
-        embedpagina1= discord.Embed(
-         title="",
-         color=COR,
-         description="3️⃣Moderador\n"
-                     "4️⃣Peculiar\n"
-                     "5️⃣Inscrito\n"
-                     "Sair",)
-         
-         embedpagina2= discord.Embed(
-          title="",
-          color=COR,
-          description="6️⃣CoxinhaNerd\n"
-                      "7️⃣FalatorioCoxudo\n"
-                      "Sair,)   
-         
-         embedapoiase= discord.Embed(
-          title="Vem ser um Peculiar!",
-          color=COR,
-          description="[Clique aqui]("+ link +")   Para Fazer parte do Apoia-se.\n"
-             "-Caso já assinou entre em contato com o jarvis ou TheLopes.",)   
-             
-             
-        chatcoxinha= client.get_channel("442855049366994954")     
-        coxinhachat='{}'.format(chatcoxinha.mention) 
-           
-        chatpeculiar= client.get_channel("442859310070890497")     
-        peculiarchat='{}'.format(chatpeculiar.mention) 
-        
-             
-        await client.send_message(message.channel, embed=embedpagina)
-        msg1 = await client.wait_for_message(author=message.author, content='1')
-        embedpagina1.set_thumbnail(url='https://cdn.discordapp.com/attachments/425141386266935296/447524877847756830/coxinhanerd.png')
-        await client.send_message(message.channel, embed=embedpagina1)
       
-        msg2 = await client.wait_for_message(author=message.author, content='2')
-        embedpagina2.set_thumbnail(url='https://cdn.discordapp.com/attachments/425141386266935296/447524877847756830/coxinhanerd.png')
-        await client.send_message(message.channel, embed=embedpagina2)
-        
-        
-        msg3 = await client.wait_for_message(author=message.author, content='3')
-        await client.send_message(message.channel, "Entre em Contato com **CRIS** ou **PANDA**")
-        
-        msg4 = await client.wait_for_message(author=message.author, content='4')
-        await client.send_message(message.channel, embed=embedapoiase)
-        
-        msg5 = await client.wait_for_message(author=message.author, content='5')
-        role = discord.utils.find(lambda r: r.name == "Inscrito", msg.server.roles)
-        
-        msg6 = await client.wait_for_message(author=message.author, content='6')
-        await client.send_message(message.channel, coxinhachat)
-       
-        msg7 = await client.wait_for_message(author=message.author, content='7')
-        await client.send_message(message.channel, peculiarchat)
-        
-        msgsair = await client.wait_for_message(author=message.author, content='sair')
-        await client.delete_message(message)
-        
-        
         
         
    
