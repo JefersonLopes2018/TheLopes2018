@@ -271,11 +271,10 @@ async def on_message(message):
      elif message.content.lower().startswith('?staff'):
          canal= client.get_channel("425150435725279253")
          avisos= client.get_channel("392711722172940298")
+         await client.add_reaction(message, ':sim:444562578639945728')
+         await client.send_message(canal, "<@334359138110799872>")
+         await client.send_message(canal, message.content[12:])
          
-          
-          await client.send_message(canal, "<@334359138110799872>")
-          await client.send_message(canal, message.content[12:])
-          await client.add_reaction(message, ':sim:444562578639945728')
         
 
 
