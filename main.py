@@ -117,19 +117,7 @@ async def on_message(message):
         await client.delete_message(message)
 
         
-     if message.content.lower().startswith('?cadinfo'):
-      embed50 = discord.Embed(
-      title='Realize o Cadastro.',
-      color=COR,
-      description=
-                 '-Para ter Seu Registro no Banco de dados do <@423738913878966283>.\n'
-         ' \n'
-         ' \n'
-          '-Digite **?cadastro**',)
-         
-      await client.send_message(message.channel, embed=embed50)
-      await client.add_reaction(message, '📑')  
-        
+   
         
         
         
@@ -184,7 +172,7 @@ async def on_message(message):
         
         #jarvis_online
         
-     if message.content.lower().startswith('?erros'):
+     if message.content.lower().startswith('?jarvis.'):
         msgjarvis= 'Olá {}, Cheguei!'.format(message.author.mention)
         await client.send_message(message.channel, msgjarvis)
         await client.send_message(message.channel, "https://cdn.discordapp.com/attachments/289891525918195712/428189193919922179/tenor.gif")
@@ -233,6 +221,7 @@ async def on_message(message):
        await client.send_message(avisos, message.content[8:])
        await client.delete_message(message)  
    
+
      if message.content.lower().startswith('jarvis'):
        staff = client.get_channel("425150435725279253")
        sos = '<@334359138110799872> você foi solitado por {}'.format(message.author.mention)
@@ -275,33 +264,20 @@ async def on_message(message):
         
         
      #Banco_de_dados
-    
-     if message.content.lower().startswith('?relist'):
-
-       embedlist= discord.Embed(
-        title='Lista de Registrados',
-        color=COR,
-        description='**001**: Jeferson Lopes\n'
-                   '**002**: Anthony Almeida'
-                   '\n'
-                   '\n'
-                   '-Digite ** `` ?cadastro `` ** para entrar nos registros do <@423738913878966283>')
-
-       embedlist.set_thumbnail(url='https://cdn.discordapp.com/attachments/425141386266935296/435928628908523520/book_stack_pc_1600_clr_3258.png')
-       await client.send_message(message.channel, embed=embedlist)
-
-         
+  
        
 
 
      elif message.content.lower().startswith('?staff'):
          canal= client.get_channel("425150435725279253")
          avisos= client.get_channel("392711722172940298")
-      
-         await client.send_message(canal, "<@334359138110799872>")
-         await client.send_message(canal, message.content[12:])
-         await client.send_message(message.channel, msgdados)
-         await client.add_reaction(message, ':sim:444562578639945728')
+         try:
+          await client.add_reaction(message, ':sim:444562578639945728')
+          await client.send_message(canal, "<@334359138110799872>")
+          await client.send_message(canal, message.content[12:])
+          await client.send_message(message.channel, msgdados)
+         except IndexError:
+          await client.send_message(message.channel, "🤬 NÃO USE O COMANDO PARA NADA, DEUS TA VENDO")
 
 
 
