@@ -65,9 +65,8 @@ async def on_message(message):
          )
          embedinfo.set_thumbnail(url='https://cdn.discordapp.com/avatars/423738913878966283/3eae6e8f5be338604dbf4a21ad96a34c.webp?size=1024')
 
-         embedinfo.add_field(name='🔷Comandos de interação',value='.', inline=False)
-       
-         embedinfo.add_field(name='?jarvis',value='Chama o BOT', inline=False)
+        
+         embedinfo.add_field(name='jarvis',value='Pergunta algo ao Jarvis!', inline=False)
          embedinfo.add_field(name='?avatar',value='Mostra o seu avatar', inline=False)
          embedinfo.add_field(name='t?avatar *@user*',value='Mostra o avatar do user.', inline=False)
          embedinfo.add_field(name='?enquete',value='Cria uma enquete', inline=False)
@@ -76,14 +75,8 @@ async def on_message(message):
          embedinfo.add_field(name='?cblol',value='Mostra o Link do Canal no Youtube da CBLOL',inline=False)
          embedinfo.add_field(name='?moeda',value='Joga uma moeda.',inline=False)
          embedinfo.add_field(name='?convite',value='Mostra o convite do F SOCIETY', inline=False)
-        
-         embedinfo.add_field(name='🔷Comandos de registros',value='.', inline=False)
-        
          embedinfo.add_field(name='?perfil',value='Abre o menu para definir seus cargos', inline=False)
-         embedinfo.add_field(name='?cadastro',value='Abre o menu de cadastro', inline=False)
-         embedinfo.add_field(name='?enviardados', value='Envie Dados ao BOT', inline=False)
-         embedinfo.add_field(name='?registro',value='Abre o menu de registro', inline=False)
-         embedinfo.add_field(name='?relist',value='Mostra a lista de usuarios registrados', inline=False)
+        
          
       
          embedinfo.set_footer(text="-Digite ok para receber a lista no privado.")
@@ -111,14 +104,13 @@ async def on_message(message):
      #lixo
     
      if message.content.lower().startswith('?dance'):
-   
-     
         await client.send_message(message.channel, "https://cdn.discordapp.com/attachments/289891525918195712/428189193919922179/tenor.gif")
         await client.delete_message(message)
 
-        
-   
-        
+     if message.content.lower().startswith('!dance'):
+        await client.send_message(message.channel, "https://cdn.discordapp.com/attachments/289891525918195712/428189193919922179/tenor.gif")
+        await client.delete_message(message)
+
         
         
         
@@ -165,6 +157,7 @@ async def on_message(message):
             pass
         
 
+        
         
         
         
@@ -271,7 +264,9 @@ async def on_message(message):
      elif message.content.lower().startswith('?staff'):
          canal= client.get_channel("425150435725279253")
          avisos= client.get_channel("392711722172940298")
-         await client.add_reaction(message, ':sim:444562578639945728')
+         await client.delete_message(message)
+         foi=await client.send_message(message.channel, "Mensagem Enviada com Sucesso!")
+         await client.add_reaction(foi, ':sim:444562578639945728')
          await client.send_message(canal, "<@334359138110799872>")
          await client.send_message(canal, message.content[7:])
          
