@@ -354,21 +354,21 @@ async def on_reaction_add(reaction, user):
 async def on_reaction_remove(reaction, user):
     msg = reaction.message
 
-    if reaction.emoji == "🔫" and msg.id == msg_id: #and user == msg_user:
+    if reaction.emoji == "🔫":
      role = discord.utils.find(lambda r: r.name == "GTA", msg.server.roles)
      await client.remove_roles(user, role)
      print("remove")
 
-    if reaction.emoji == "⚔" and msg.id == msg_id: #and user == msg_user:
+    if reaction.emoji == "⚔":
      role = discord.utils.find(lambda r: r.name == "LOL", msg.server.roles)
      await client.remove_roles(user, role)
      print("remove")
 
-    if reaction.emoji == "🛡" and msg.id == msg_id: #and user == msg_user:
+    if reaction.emoji == "🛡":
      role = discord.utils.find(lambda r: r.name == "FORTNITE", msg.server.roles)
      await client.remove_roles(user,role)
 
-    if reaction.emoji == "🍗" and msg.id == msg_id: #and user == msg_user:
+    if reaction.emoji == "🍗":
      role = discord.utils.find(lambda r: r.name == "Coxinha Peculiar 🍗", msg.server.roles)
      await client.remove_roles(user, role)
      print("add")
