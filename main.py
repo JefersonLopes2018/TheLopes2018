@@ -271,10 +271,12 @@ async def on_message(message):
      elif message.content.lower().startswith('?staff'):
          canal= client.get_channel("425150435725279253")
          avisos= client.get_channel("392711722172940298")
+         sos1 = '<@&463052822175285268> O usuário {} Mandou uma menssagem!'.format(message.author.mention)
          await client.delete_message(message)
          foi=await client.send_message(message.channel, "```Mensagem Enviada com Sucesso!```")
          await client.add_reaction(foi, ':sim:444562578639945728')
-         await client.send_message(canal, "<@&425144881049239553> o usuário {} enviou uma menssagem a staff!".format(message.author.mention)
+         await client.send_message(canal, sos1) 
+         await client.send_message(canal, "Menssagem:)
          await client.send_message(canal, message.content[7:])
          
         
