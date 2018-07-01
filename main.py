@@ -274,7 +274,8 @@ async def on_message(message):
          await client.delete_message(message)
          foi=await client.send_message(message.channel, "```Mensagem Enviada com Sucesso!```")
          await client.add_reaction(foi, ':sim:444562578639945728')
-         await client.send_message(canal, "<@&425144881049239553>")
+         await client.send_message(canal, "<@&425144881049239553> o usuário {} enviou uma menssagem a staff!").format(message.author.mention)
+         await client.send_message(canal, "Menssagem:")
          await client.send_message(canal, message.content[7:])
          
         
@@ -337,22 +338,22 @@ async def on_message(message):
 async def on_reaction_add(reaction, user):
     msg = reaction.message
 
-    if reaction.emoji == "🔫" and msg.id == msg_id: #and user == msg_user:
+    if reaction.emoji == "🔫": 
      role = discord.utils.find(lambda r: r.name == "GTA", msg.server.roles)
      await client.add_roles(user, role)
      print("add")
 
-    if reaction.emoji == "⚔" and msg.id == msg_id: #and user == msg_user:
+    if reaction.emoji == "⚔":
      role = discord.utils.find(lambda r: r.name == "LOL", msg.server.roles)
      await client.add_roles(user, role)
      print("add")
 
-    if reaction.emoji == "🛡" and msg.id == msg_id: #and user == msg_user:
+    if reaction.emoji == "🛡":
      role = discord.utils.find(lambda r: r.name == "FORTNITE", msg.server.roles)
      await client.add_roles(user, role)
      print("add")
 
-    if reaction.emoji == "🍗" and msg.id == msg_id: #and user == msg_user:
+    if reaction.emoji == "🍗" :
      role = discord.utils.find(lambda r: r.name == "Coxinha Peculiar 🍗", msg.server.roles)
      await client.add_roles(user, role)
      print("add")
