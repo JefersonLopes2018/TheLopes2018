@@ -274,7 +274,7 @@ async def on_message(message):
          await client.delete_message(message)
          foi=await client.send_message(message.channel, "```Mensagem Enviada com Sucesso!```")
          await client.add_reaction(foi, ':sim:444562578639945728')
-         await client.send_message(canal, "<@&425144881049239553> o usuário {} enviou uma menssagem a staff!").format(message.author.mention)
+         await client.send_message(canal, "<@&425144881049239553> o usuário {} enviou uma menssagem a staff!".format(message.author.mention)
          await client.send_message(canal, "Menssagem:")
          await client.send_message(canal, message.content[7:])
          
