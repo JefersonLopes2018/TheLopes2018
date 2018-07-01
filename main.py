@@ -67,8 +67,10 @@ async def on_message(message):
 
         
          embedinfo.add_field(name='jarvis',value='Pergunta algo ao Jarvis!', inline=False)
+         embedinfo.add_field(name='?staff +mensagem',value='Envia uma mensagem a staff do Jarvis.', inline=False)
          embedinfo.add_field(name='?avatar',value='Mostra o seu avatar', inline=False)
          embedinfo.add_field(name='t?avatar *@user*',value='Mostra o avatar do user.', inline=False)
+         embedinfo.add_field(name='?dance',value='Bota o jarvis para dançar.', inline=False)
          embedinfo.add_field(name='?enquete',value='Cria uma enquete', inline=False)
          embedinfo.add_field(name='?contato',value='Envia o contato do programador', inline=False)
          embedinfo.add_field(name='?rlol',value='Escolhe Entre:|Top|Jungle|Mid|Adc|Suporte|', inline=False)
@@ -92,12 +94,20 @@ async def on_message(message):
 
 
      if message.content.lower().startswith("?enquete"):
-      menssagem = message.content[9:]
-      msp = await client.send_message(message.channel, menssagem)
+       menssagem2 = message.content[9:]
+       embedeq= discord.Embed(
+          title='VOTE AQUI!',
+          color=COR,
+          description=menssagem2,
+                 )
+       embedeq.set_thumbnail(url='https://cdn.discordapp.com/avatars/423738913878966283/3eae6e8f5be338604dbf4a21ad96a34c.webp?size=1024')
+       embedeq.set_footer(text='-Obrigado por responder!')
+       msp55 = await client.send_message(message.channel, embed=embedeq)
 
-      await client.delete_message(message)
-      await client.add_reaction(msp, ':sim:444562578639945728')
-      await client.add_reaction(msp, ':nao:444562647799562261')
+
+       await client.delete_message(message)
+       await client.add_reaction(msp55, ':sim:444562578639945728')
+       await client.add_reaction(msp55, ':nao:444562647799562261')
    
 
 
@@ -261,9 +271,9 @@ async def on_message(message):
          canal= client.get_channel("425150435725279253")
          avisos= client.get_channel("392711722172940298")
          await client.delete_message(message)
-         foi=await client.send_message(message.channel, "Mensagem Enviada com Sucesso!")
+         foi=await client.send_message(message.channel, "```Mensagem Enviada com Sucesso!```")
          await client.add_reaction(foi, ':sim:444562578639945728')
-         await client.send_message(canal, "<@334359138110799872>")
+         await client.send_message(canal, "<@&425144881049239553>")
          await client.send_message(canal, message.content[7:])
          
         
