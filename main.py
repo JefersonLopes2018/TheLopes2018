@@ -173,7 +173,7 @@ async def on_message(message):
         
      if message.content.lower().startswith('?oculto'):
         canal= client.get_channel("442860201503227904")
-        await client.send_message(canal, message.content[4:])
+        await client.send_message(canal, message.content[7:])
         
         
 
