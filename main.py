@@ -172,7 +172,7 @@ async def on_message(message):
         #jarvis_online
         
      if message.content.lower().startswith('?oculto'):
-        canal= client.get_channel("464564096654639104")
+        canal= client.get_channel("442860201503227904")
         await client.send_message(canal, message.content[4:])
         
         
