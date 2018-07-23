@@ -107,14 +107,14 @@ async def on_message(message):
          
       #musica
     
-   if message.content.startswith('?entrar'):
+     if message.content.startswith('?entrar'):
       try:
         canal = message.author.voice.voice_channel
         await client.join_voice_channel(canal)
       except discord.errors.InvalidArgument:
              await client.send_message(message.channel, "Você precisa esta conectado a um canal de voz!")
 
-    if message.content.startswith('?sair'):
+     if message.content.startswith('?sair'):
       try:
         canaldevoz = client.voice_client_in(message.server)
         await canaldevoz.disconnect()
