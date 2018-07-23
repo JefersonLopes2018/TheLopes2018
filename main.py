@@ -30,15 +30,17 @@ async def on_ready():
 
 @client.event
 async def on_member_join(member):
-  canal = client.get_channel("423328604911304708")
+  canal = client.get_channel("393451272034058241")
   regras = client.get_channel("424026852097654794")
+  bots = client.get_channel("392697933562118144")
   msg = "Bem Vindo {}\n leia as {}".format(member.mention, regras.mention)
+  msg2 = "Olá {},Esse é o canal de Chat, Para liberar Outras salas digite ?perfil em {}".format(member.mention, bots.mention) 
   await client.send_message(member, msg) #substitua canal por member para enviar a msg no DM do membro
-
+  await client.send_message(canal, msg2)
 @client.event
 async def on_member_remove(member):
    canal = client.get_channel("423328604911304708")
-   msg = "Adeus garotinho juvenil {}".format(member.mention)
+   msg = "Adeus garotinho(a) juvenil {}".format(member.mention)
    await client.send_message(member, msg) #substitua canal por member para enviar a msg no DM do membro    
     
     
