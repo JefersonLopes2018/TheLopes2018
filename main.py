@@ -29,6 +29,22 @@ async def on_ready():
     print('-----TheLopes-----')
 
 @client.event
+async def on_member_join(member):
+  canal = client.get_channel("423328604911304708")
+  regras = client.get_channel("424026852097654794")
+  msg = "Bem Vindo {}\n leia as {}".format(member.mention, regras.mention)
+  await client.send_message(member, msg) #substitua canal por member para enviar a msg no DM do membro
+
+@client.event
+async def on_member_remove(member):
+   canal = client.get_channel("423328604911304708")
+   msg = "Adeus garotinho juvenil {}".format(member.mention)
+   await client.send_message(member, msg) #substitua canal por member para enviar a msg no DM do membro    
+    
+    
+    
+    
+@client.event
 async def on_message(message):
 
      if  message.author.id == '334359138110799872':
