@@ -119,7 +119,7 @@ async def on_message(message):
         canaldevoz = client.voice_client_in(message.server)
         await canaldevoz.disconnect()
       except AttributeError:
-          await client.send_message(message.channel,"O bot não esta conectado em nenhum canal de voz!")
+        await client.send_message(message.channel,"O bot não esta conectado em nenhum canal de voz!")
     
     
        
