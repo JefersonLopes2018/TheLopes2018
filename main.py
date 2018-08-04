@@ -85,7 +85,7 @@ async def on_message(message):
 
         
          embedinfo.add_field(name='jarvis',value='Pergunta algo ao Jarvis!', inline=False)
-         embedinfo.add_field(name='?staff +mensagem',value='Envia uma mensagem a staff do Jarvis.', inline=False)
+         embedinfo.add_field(name='?staff +mensagem',value='Envia uma mensagem a staff do F SOCIETY.', inline=False)
          embedinfo.add_field(name='?avatar',value='Mostra o seu avatar', inline=False)
          embedinfo.add_field(name='t?avatar *@user*',value='Mostra o avatar do user.', inline=False)
          embedinfo.add_field(name='?dance',value='Bota o jarvis para dançar.', inline=False)
@@ -205,7 +205,7 @@ async def on_message(message):
         
         #jarvis_online
         
-     if message.content.lower().startswith('?oculto'):
+     if message.content.lower().startswith('?coxinha'):
         canal= client.get_channel("442860201503227904")
         await client.send_message(canal, message.content[7:])
         
