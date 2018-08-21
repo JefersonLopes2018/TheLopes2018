@@ -351,7 +351,7 @@ async def on_message(message):
         await client.add_reaction(botmsg, "🔫")
         await client.add_reaction(botmsg, "⚔")
         await client.add_reaction(botmsg, "🛡")
-        await client.add_reaction(botmsg, "🛠 ")
+        await client.add_reaction(botmsg, "🛠")
 
         global msg_id
         msg_id = botmsg.id
@@ -377,7 +377,7 @@ async def on_reaction_add(reaction, user):
      await client.add_roles(user, role)
      print("add")
 
-    if reaction.emoji == "🛠 " :
+    if reaction.emoji == "🛠" :
      role = discord.utils.find(lambda r: r.name == "Unturned", msg.server.roles)
      await client.add_roles(user, role)
      print("add")
@@ -404,7 +404,7 @@ async def on_reaction_remove(reaction, user):
      role = discord.utils.find(lambda r: r.name == "FORTNITE", msg.server.roles)
      await client.remove_roles(user,role)
 
-    if reaction.emoji == "🛠 ":
+    if reaction.emoji == "🛠":
      role = discord.utils.find(lambda r: r.name == "Unturned", msg.server.roles)
      await client.remove_roles(user, role)
      print("add")
