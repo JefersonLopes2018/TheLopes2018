@@ -343,7 +343,7 @@ async def on_message(message):
            description="🔫 - GTA       \n"
                     "⚔  - LOL       \n"
                     "🛡  - FORTNITE  \n" 
-                    "🤢 - UNTURNED  \n"
+                    "🛠 - UNTURNED  \n"
                     ,)
              
         botmsg = await client.send_message(message.channel, embed=embed1)
