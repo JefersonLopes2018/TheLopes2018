@@ -118,9 +118,9 @@ async def on_message(message):
      if message.content.lower().startswith("?enquete"):
        menssagem2 = message.content[9:]
        embedeq= discord.Embed(
-          title='VOTE AQUI!',
+          title=menssagem2,
           color=COR,
-          description=menssagem2,
+          description="",
                  )
        embedeq.set_thumbnail(url='https://cdn.discordapp.com/avatars/423738913878966283/3eae6e8f5be338604dbf4a21ad96a34c.webp?size=1024')
        embedeq.set_footer(text='-Obrigado por responder!')
