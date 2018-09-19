@@ -246,7 +246,7 @@ async def on_message(message):
      if message.content.lower().startswith('jarvis'):
        staff = client.get_channel("425150435725279253")
        sos = '<@&463052822175285268> vocês foram solitados por {}'.format(message.author.mention)
-       javai = '{} Vou analisar sua duvida e lhe responder assim que possivel!'.format(avatarembed.set_author(name=message.author.name)
+       javai = '{} Vou analisar sua duvida e lhe responder assim que possivel!'.format(name=message.author.name)
        await client.send_message(staff, sos)
        
        await client.send_message(staff, message.content[7:])
