@@ -307,14 +307,14 @@ async def on_message(message):
      if message.content.lower().startswith('?link'):
         link2 = 'https://discordapp.com/oauth2/authorize?client_id=423738913878966283&scope=bot&permissions=8'
         embedlinkbot = discord.Embed(
-         title='',
+         title='Leve o Jarvis com Você!',
          color=COR,
          description= "\n"
             "[Clique aqui]("+ link2 +") Para Adicionar o BOT ao seu Server\n")   
-      embedlinkbot.set_thumbnail(url='https://cdn.discordapp.com/avatars/423738913878966283/3eae6e8f5be338604dbf4a21ad96a34c.webp?size=1024')
-      await client.send_message(message.channel, embed=embedlinkbot)
-      await client.delete_message(message)
-      await client.add_reaction(, '😀')
+        embedlinkbot.set_thumbnail(url='https://cdn.discordapp.com/avatars/423738913878966283/3eae6e8f5be338604dbf4a21ad96a34c.webp?size=1024')
+        await client.send_message(message.channel, embed=embedlinkbot)
+        await client.delete_message(message)
+        await client.add_reaction(, '😀')
 
             
             
