@@ -311,7 +311,7 @@ async def on_message(message):
          color=COR,
          description= "\n"
             "[Clique aqui]("+ link2 +") Para Adicionar o BOT ao seu Server\n")   
-      embedcblol.set_thumbnail(url='https://cdn.discordapp.com/avatars/423738913878966283/3eae6e8f5be338604dbf4a21ad96a34c.webp?size=1024')
+      embedlinkbot.set_thumbnail(url='https://cdn.discordapp.com/avatars/423738913878966283/3eae6e8f5be338604dbf4a21ad96a34c.webp?size=1024')
       await client.send_message(message.channel, embed=embedlinkbot)
       await client.delete_message(message)
       await client.add_reaction(, '😀')
