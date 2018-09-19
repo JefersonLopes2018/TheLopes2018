@@ -86,6 +86,7 @@ async def on_message(message):
         
          embedinfo.add_field(name='jarvis',value='Pergunta algo ao Jarvis!', inline=False)
          embedinfo.add_field(name='?staff +mensagem',value='Envia uma mensagem a staff do F SOCIETY.', inline=False)
+         embedinfo.add_field(name='?link',value='Pega o link para add o BOT no seu server', inline=False)
          embedinfo.add_field(name='?avatar',value='Mostra o seu avatar', inline=False)
          embedinfo.add_field(name='t?avatar *@user*',value='Mostra o avatar do user.', inline=False)
          embedinfo.add_field(name='?dance',value='Bota o jarvis para dançar.', inline=False)
@@ -245,7 +246,7 @@ async def on_message(message):
 
      if message.content.lower().startswith('jarvis'):
        staff = client.get_channel("425150435725279253")
-       sos = '<@&463052822175285268> vocês foram solitados por **{}**,em {}'.format(message.author.name,message.server.name)
+       sos = '<@&463052822175285268> vocês foram solitados por **{}**,em **{}**'.format(message.author.name,message.server.name)
        javai = '{} Vou analisar sua duvida e lhe responder assim que possivel!'.format(message.author.mention)
        await client.send_message(staff, sos)
        
