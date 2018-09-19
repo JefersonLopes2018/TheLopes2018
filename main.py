@@ -245,7 +245,7 @@ async def on_message(message):
 
      if message.content.lower().startswith('jarvis'):
        staff = client.get_channel("425150435725279253")
-       sos = '<@&463052822175285268> vocês foram solitados por **{}**'.format(message.author.name)
+       sos = '<@&463052822175285268> vocês foram solitados por **{}**,em {}'.format(message.author.name,message.server.name)
        javai = '{} Vou analisar sua duvida e lhe responder assim que possivel!'.format(message.author.mention)
        await client.send_message(staff, sos)
        
@@ -314,7 +314,7 @@ async def on_message(message):
         embedlinkbot.set_thumbnail(url='https://cdn.discordapp.com/avatars/423738913878966283/3eae6e8f5be338604dbf4a21ad96a34c.webp?size=1024')
         await client.send_message(message.channel, embed=embedlinkbot)
         await client.delete_message(message)
-        await client.add_reaction(, '😀')
+        
 
             
             
