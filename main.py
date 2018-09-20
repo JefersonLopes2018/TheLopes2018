@@ -246,7 +246,7 @@ async def on_message(message):
 
      if message.content.lower().startswith('jarvis'):
        staff = client.get_channel("425150435725279253")
-       sos = '<@&463052822175285268> vocês foram solitados por **{}**,em **{}**'.format(message.author.name,message.server.name)
+       sos = '<@&463052822175285268> vocês foram solitados por **{}**,em **{}**'.format(message.author.mention,message.server.name)
        javai = '{} Vou analisar sua duvida e lhe responder assim que possivel!'.format(message.author.mention)
        await client.send_message(staff, sos)
        
@@ -294,7 +294,7 @@ async def on_message(message):
      elif message.content.lower().startswith('?staff'):
          canal= client.get_channel("425150435725279253")
          avisos= client.get_channel("392711722172940298")
-         sos1 = '<@&425144881049239553> O usuário {} Mandou uma menssagem!'.format(message.author.mention)
+         sos1 = '<@&425144881049239553> O usuário {} Mandou uma menssagem de **{}** para o **F SOCIETY**'.format(message.author.mention,message.server.name)
          await client.delete_message(message)
          foi=await client.send_message(message.channel, "```Mensagem Enviada com Sucesso!```")
          await client.add_reaction(foi, ':sim:444562578639945728')
