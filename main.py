@@ -136,6 +136,16 @@ async def on_message(message):
 
      #lixo
     
+     if message.channel == client.get_channel('392746066555961345'):
+       canalhe = client.get_channel("492158366622285835")
+       BV = '{}'.format(message.content[0:])
+       await client.send_message(canalhe, BV)
+       await asyncio.sleep(3)
+       await client.delete_message(message)
+    
+    
+    
+    
      if message.content.lower().startswith('?dance'):
         await client.send_message(message.channel, "https://cdn.discordapp.com/attachments/289891525918195712/428189193919922179/tenor.gif")
         await client.delete_message(message)
