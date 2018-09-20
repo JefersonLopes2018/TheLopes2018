@@ -137,7 +137,7 @@ async def on_message(message):
      #lixo
     
      if message.channel == client.get_channel('492158366622285835'):
-       canalhe = client.get_channel("492158366622285835")
+       canalhe = client.get_channel("485118190473576460")
        BV = '{}'.format(message.content[0:])
        await client.send_message(canalhe, BV)
        await asyncio.sleep(3)
