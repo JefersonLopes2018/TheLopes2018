@@ -140,7 +140,7 @@ async def on_message(message):
        canalhe = client.get_channel("485118190473576460")
        BV = '{}'.format(message.content[0:])
        DDOS = '**Enviada por** {}'.format(message.author.mention)
-      
+       await client.send_message(message.author,"Obrigado por mandar a sua Musica! :)")
        await client.send_message(canalhe, DDOS)
        await client.send_message(canalhe, BV)
        await asyncio.sleep(3)
