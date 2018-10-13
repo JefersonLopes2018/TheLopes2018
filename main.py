@@ -211,7 +211,7 @@ async def on_message(message):
         canal= client.get_channel("442860201503227904")
         await client.send_message(canal, message.content[7:])
         
-     if message.content.lower().startswith("!menu"):
+     if message.content.lower().startswith("?menu"):
 
       user = message.author
       server = message.server
