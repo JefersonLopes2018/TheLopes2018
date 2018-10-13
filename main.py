@@ -211,7 +211,51 @@ async def on_message(message):
         canal= client.get_channel("442860201503227904")
         await client.send_message(canal, message.content[7:])
         
-        
+     if message.content.lower().startswith("!menu"):
+
+      user = message.author
+      server = message.server
+      embedmenu = discord.Embed(
+         title='📌MENU',
+         color=COR,
+         description='\n'
+                     '\n')
+
+      embedmenu.set_thumbnail(url='https://cdn.discordapp.com/attachments/425141386266935296/485599235232890880/2055930_1.jpg')
+
+      embedmenu.add_field(name='🔰C1',value='🔰C2', inline=True)
+      embedmenu.add_field(name='🔫GTA',value='⚖️LOL', inline=True)
+      embedmenu.add_field(name='🔰C3',value='🔰C4 ', inline=True)
+      embedmenu.add_field(name='🏠FORTNITE',value='⚒UNTURNED', inline=True)
+      embedmenu.add_field(name='🔰C5',value='🔰C6', inline=True)
+      embedmenu.add_field(name='💣GHOST RECON', value='⚔️DAUNTLESS', inline=True)
+
+      embedmenu.set_footer(text="-Digite o codigo de liberação de salas.")
+      await client.send_message(message.channel, embed=embedmenu)
+
+     if message.content.lower().startswith("c1"):
+      cargo1 = discord.utils.get(message.server.roles, name="GTA")
+      await client.add_roles(message.author, cargo1)
+
+     if message.content.lower().startswith("c2"):
+      cargo2 = discord.utils.get(message.server.roles, name="LOL")
+      await client.add_roles(message.author, cargo2)
+
+     if message.content.lower().startswith("c3"):
+      cargo3 = discord.utils.get(message.server.roles, name="FORTNITE")
+      await client.add_roles(message.author, cargo3)
+
+     if message.content.lower().startswith("c4"):
+      cargo4 = discord.utils.get(message.server.roles, name="Unturned")
+      await client.add_roles(message.author, cargo4)
+
+     if message.content.lower().startswith("c5"):
+      cargo5 = discord.utils.get(message.server.roles, name="Ghost Recon")
+      await client.add_roles(message.author, cargo5)
+
+     if message.content.lower().startswith("c6"):
+      cargo6 = discord.utils.get(message.server.roles, name="Dautless")
+      await client.add_roles(message.author, cargo6)   
 
         
         
