@@ -136,6 +136,7 @@ async def on_message(message):
 
      #lixo
     
+     #playlist
      if message.channel == client.get_channel('492158366622285835'):
        canalhe = client.get_channel("485118190473576460")
        BV = '{}'.format(message.content[0:])
@@ -206,11 +207,13 @@ async def on_message(message):
         
         
         #jarvis_online
-        
-     if message.content.lower().startswith('?coxinha'):
-        canal= client.get_channel("442860201503227904")
-        await client.send_message(canal, message.content[7:])
-        
+     
+     if member.server.id == '343227251501957121'
+       if message.content.lower().startswith('?coxinha'):
+         canal= client.get_channel("442860201503227904")
+         await client.send_message(canal, message.content[7:])
+     
+    
      if message.content.lower().startswith("?menu"):
 
       user = message.author
@@ -386,6 +389,7 @@ async def on_message(message):
       await client.delete_message(message)
       await client.add_reaction(convic, '😀')
 
+        
         
      if message.content.lower().startswith('?moeda'):
       choice = random.randint(1,2)
