@@ -208,7 +208,8 @@ async def on_message(message):
         
         #jarvis_online
      
-     if member.server.id == '343227251501957121'
+     if not message.server.id == '343227251501957121':
+         return await client.send_message(message.channel, "```Esse comando é privado!```")
        if message.content.lower().startswith('?coxinha'):
          canal= client.get_channel("442860201503227904")
          await client.send_message(canal, message.content[7:])
