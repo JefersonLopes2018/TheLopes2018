@@ -134,7 +134,7 @@ async def on_message(message):
    
 
 
-     #lixo
+     
     
      #playlist
      if message.channel == client.get_channel('492158366622285835'):
@@ -208,11 +208,12 @@ async def on_message(message):
         
         #jarvis_online
      
-     if not message.server.id == '343227251501957121':
-         return await client.send_message(message.channel, "```Esse comando é privado!```")
-       if message.content.lower().startswith('?coxinha'):
-         canal= client.get_channel("442860201503227904")
-         await client.send_message(canal, message.content[7:])
+     
+     if message.content.lower().startswith('?coxinha'):
+        if not message.server.id == '343227251501957121': 
+           return await client.send_message(message.channel, "```Esse comando é privado!```")
+        canal= client.get_channel("442860201503227904")
+        await client.send_message(canal, message.content[7:])
      
     
      if message.content.lower().startswith("?menu"):
