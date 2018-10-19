@@ -222,7 +222,7 @@ async def on_message(message):
     
      if message.content.lower().startswith("?menu"):
        if not message.server.id == '343227251501957121': 
-           return await client.send_message(message.channel, "```Esse comando é privado!```")
+           return await client.send_message(message.channel, "😬**Esse comando é privado!**")
        user = message.author
        server = message.server
        embedmenu = discord.Embed(
@@ -374,16 +374,18 @@ async def on_message(message):
 
 
      elif message.content.lower().startswith('?staff'):
+       try: 
          canal= client.get_channel("425150435725279253")
          avisos= client.get_channel("392711722172940298")
          sos1 = '<@&425144881049239553> O usuário {} Mandou uma menssagem de **{}** para o **F SOCIETY**'.format(message.author.mention,message.server.name)
          CON = '```{}```'.format(message.content[7:])
          await client.delete_message(message)
-         foi=await client.send_message(message.channel, "```Mensagem Enviada com Sucesso!```")
-         await client.add_reaction(foi, ':sim:444562578639945728')
-         await client.send_message(canal, sos1) 
+         foi=await client.send_message(message.channel, "✔️ **Mensagem Enviada com Sucesso!**")
          
+         await client.send_message(canal, sos1)
          await client.send_message(canal, CON)
+       except:
+        await client.send_message(message.channel, "⚠️**Falha ao enviar mensagem!**")
          
         
 
