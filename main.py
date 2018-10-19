@@ -135,8 +135,8 @@ async def on_message(message):
      #em construção AFK
      
      if "<@334359138110799872>" in message.content:
-      teste23 = await client.send_message(message.channel, "```O TheLopes está na mãe dele!```")
-      print (teste23)
+      teste23 = await client.send_message(message.channel, "```O TheLopes está Ocupado```")
+      print ("ocupado")
 
      
     
@@ -222,26 +222,27 @@ async def on_message(message):
     
      if message.content.lower().startswith("?menu"):
 
-      user = message.author
-      server = message.server
-      embedmenu = discord.Embed(
+       user = message.author
+       server = message.server
+       embedmenu = discord.Embed(
          title='📌MENU',
          color=COR,
          description='\n'
                      '\n')
 
-      embedmenu.set_thumbnail(url='https://cdn.discordapp.com/attachments/425141386266935296/485599235232890880/2055930_1.jpg')
+       embedmenu.set_thumbnail(url='https://cdn.discordapp.com/attachments/425141386266935296/485599235232890880/2055930_1.jpg')
 
-      embedmenu.add_field(name='🔰C1',value='🔰C2', inline=True)
-      embedmenu.add_field(name='🔫GTA',value='⚖️LOL', inline=True)
-      embedmenu.add_field(name='🔰C3',value='🔰C4 ', inline=True)
-      embedmenu.add_field(name='🏠FORTNITE',value='⚒UNTURNED', inline=True)
-      embedmenu.add_field(name='🔰C5',value='🔰C6', inline=True)
-      embedmenu.add_field(name='💣GHOST RECON', value='⚔️DAUNTLESS', inline=True)
+       embedmenu.add_field(name='🔰C1',value='🔰C2', inline=True)
+       embedmenu.add_field(name='🔫GTA',value='⚖️LOL', inline=True)
+       embedmenu.add_field(name='🔰C3',value='🔰C4 ', inline=True)
+       embedmenu.add_field(name='🏠FORTNITE',value='⚒UNTURNED', inline=True)
+       embedmenu.add_field(name='🔰C5',value='🔰C6', inline=True)
+       embedmenu.add_field(name='💣GHOST RECON', value='⚔️DAUNTLESS', inline=True)
 
-      embedmenu.set_footer(text="-Digite o codigo de liberação de salas.")
-      await client.send_message(message.channel, embed=embedmenu)
-
+       embedmenu.set_footer(text="-Digite EXIT para fechar o menu")
+       resp = await client.send_message(message.channel, embed=embedmenu)
+       msg1 = await client.wait_for_message(author=message.author, content='exit')
+       await client.delete_message(resp)
      if message.content.lower().startswith("c1"):
       cargo1 = discord.utils.get(message.server.roles, name="GTA")
       await client.add_roles(message.author, cargo1)
@@ -296,11 +297,13 @@ async def on_message(message):
      #sistema_de_controle(mensagem)
         
      if message.content.lower().startswith('?diz'):
+      try:
        if not message.author.id == '334359138110799872':
          return await client.send_message(message.channel, "```Você Não tem permissão!```")
        await client.send_message(message.channel, message.content[4:])
        await client.delete_message(message)
-
+      except:
+       await client.delete_message(message)
         
      if message.content.lower().startswith('?avisos'):
        avisos= client.get_channel("392711722172940298")
