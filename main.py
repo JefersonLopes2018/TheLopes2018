@@ -94,7 +94,7 @@ async def on_message(message):
          embedinfo.add_field(name='?contato',value='Envia o contato do programador', inline=False)
          embedinfo.add_field(name='?rlol',value='Escolhe Entre:|Top|Jungle|Mid|Adc|Suporte|', inline=False)
          embedinfo.add_field(name='?cblol',value='Mostra o Link do Canal no Youtube da CBLOL',inline=False)
-          embedinfo.add_field(name='?game',value='Escolhe um jogo da lista do F SOCIETY.',inline=False)
+         embedinfo.add_field(name='?game',value='Escolhe um jogo da lista do F SOCIETY.',inline=False)
          embedinfo.add_field(name='?moeda',value='Joga uma moeda.',inline=False)
          embedinfo.add_field(name='?convite',value='Mostra o convite do F SOCIETY', inline=False)
          embedinfo.add_field(name='?menu',value='Abre o menu para definir seus cargos', inline=False)
