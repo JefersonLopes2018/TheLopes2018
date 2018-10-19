@@ -135,12 +135,12 @@ async def on_message(message):
    
      #em construção AFK
      
-     if "<@334359138110799872>" in message.content:
+     if "" in message.content:
       teste23 = await client.send_message(message.channel, "🔕**O TheLopes está Ocupado**")
       print ("ocupado")
 
         
-     if message.content.lower().startswith('?jogo'):
+     if message.content.lower().startswith('?game'):
       choice = random.randint(1, 6)
       if choice == 1:
          await client.send_message(message.channel, '**GTA**')
