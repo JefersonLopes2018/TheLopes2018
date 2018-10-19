@@ -221,7 +221,8 @@ async def on_message(message):
      
     
      if message.content.lower().startswith("?menu"):
-
+       if not message.server.id == '343227251501957121': 
+           return await client.send_message(message.channel, "```Esse comando é privado!```")
        user = message.author
        server = message.server
        embedmenu = discord.Embed(
@@ -244,26 +245,38 @@ async def on_message(message):
        msg1 = await client.wait_for_message(author=message.author, content='exit')
        await client.delete_message(resp)
      if message.content.lower().startswith("c1"):
+      if not message.server.id == '343227251501957121': 
+        return await client.send_message(message.channel, "😬**Esse comando é privado!**")
       cargo1 = discord.utils.get(message.server.roles, name="GTA")
       await client.add_roles(message.author, cargo1)
 
      if message.content.lower().startswith("c2"):
+      if not message.server.id == '343227251501957121': 
+        return await client.send_message(message.channel, "😬**Esse comando é privado!**")
       cargo2 = discord.utils.get(message.server.roles, name="LOL")
       await client.add_roles(message.author, cargo2)
 
      if message.content.lower().startswith("c3"):
+      if not message.server.id == '343227251501957121': 
+       return await client.send_message(message.channel, "😬**Esse comando é privado!**")  
       cargo3 = discord.utils.get(message.server.roles, name="FORTNITE")
       await client.add_roles(message.author, cargo3)
 
      if message.content.lower().startswith("c4"):
+      if not message.server.id == '343227251501957121': 
+        return await client.send_message(message.channel, "😬**Esse comando é privado!**")   
       cargo4 = discord.utils.get(message.server.roles, name="Unturned")
       await client.add_roles(message.author, cargo4)
 
      if message.content.lower().startswith("c5"):
+      if not message.server.id == '343227251501957121': 
+        return await client.send_message(message.channel, "😬**Esse comando é privado!**")
       cargo5 = discord.utils.get(message.server.roles, name="Ghost Recon")
       await client.add_roles(message.author, cargo5)
 
      if message.content.lower().startswith("c6"):
+      if not message.server.id == '343227251501957121': 
+        return await client.send_message(message.channel, "😬**Esse comando é privado!**")
       cargo6 = discord.utils.get(message.server.roles, name="Dautless")
       await client.add_roles(message.author, cargo6)   
 
