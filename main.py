@@ -133,12 +133,19 @@ async def on_message(message):
        await client.add_reaction(msp55, ':sim:444562578639945728')
        await client.add_reaction(msp55, ':nao:444562647799562261')
    
+
+
      #em construção AFK
      
-     if "mnmnj544" in message.content:
+     if "<@334359138110799872>" in message.content:
       teste23 = await client.send_message(message.channel, "🔕**O TheLopes está Ocupado**")
       print ("ocupado")
 
+        
+        
+        
+        
+        
         
      if message.content.lower().startswith('?game'):
       choice = random.randint(1, 6)
