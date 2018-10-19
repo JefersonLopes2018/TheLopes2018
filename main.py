@@ -94,6 +94,7 @@ async def on_message(message):
          embedinfo.add_field(name='?contato',value='Envia o contato do programador', inline=False)
          embedinfo.add_field(name='?rlol',value='Escolhe Entre:|Top|Jungle|Mid|Adc|Suporte|', inline=False)
          embedinfo.add_field(name='?cblol',value='Mostra o Link do Canal no Youtube da CBLOL',inline=False)
+          embedinfo.add_field(name='?game',value='Escolhe um jogo da lista do F SOCIETY.',inline=False)
          embedinfo.add_field(name='?moeda',value='Joga uma moeda.',inline=False)
          embedinfo.add_field(name='?convite',value='Mostra o convite do F SOCIETY', inline=False)
          embedinfo.add_field(name='?menu',value='Abre o menu para definir seus cargos', inline=False)
@@ -138,7 +139,21 @@ async def on_message(message):
       teste23 = await client.send_message(message.channel, "🔕**O TheLopes está Ocupado**")
       print ("ocupado")
 
-     
+        
+     if message.content.lower().startswith('?jogo'):
+      choice = random.randint(1, 6)
+      if choice == 1:
+         await client.send_message(message.channel, '**GTA**')
+      if choice == 2:
+         await client.send_message(message.channel, '**LOL**')
+      if choice == 3:
+         await client.send_message(message.channel, '**FORTNITE**')
+      if choice == 4:
+         await client.send_message(message.channel, '**UNTURNED**')
+      if choice == 5:
+         await client.send_message(message.channel, '**GHOST RECON**')
+      if choice == 6:
+         await client.send_message(message.channel, '**DAUNTLESS**')
     
      #playlist
      if message.channel == client.get_channel('492158366622285835'):
