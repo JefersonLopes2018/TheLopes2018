@@ -237,7 +237,7 @@ async def on_message(message):
      
      if message.content.lower().startswith('?test'):
         if not message.server.id == '343227251501957121': 
-           return await client.send_message(message.channel, "```Esse comando é privado!```")
+           return await client.send_message(message.channel, "**😬Esse comando é privado!**")
         canal= client.get_channel("392746066555961345")
         await client.send_message(canal, message.content[7:])
      
@@ -343,7 +343,7 @@ async def on_message(message):
      if message.content.lower().startswith('?avisos'):
        avisos= client.get_channel("392711722172940298")
        if not message.author.id == '334359138110799872':
-         return await client.send_message(message.channel, "```Você Não tem permissão!```")
+         return await client.send_message(message.channel, "😬**Você Não tem permissão!**")
        await client.send_message(avisos, message.content[8:])
        await client.delete_message(message)  
    
@@ -460,11 +460,8 @@ async def on_message(message):
 
            title="Defina seu Perfil!",
            color=COR,
-           description="🔫 - GTA       \n"
-                    "⚔  - LOL       \n"
-                    "🛡  - FORTNITE  \n" 
-                    "🛠 - UNTURNED  \n"
-                    ,)
+           description="-ESSE COMANDO FOI DESATIVADO!",)
+                   
              
         botmsg = await client.send_message(message.channel, embed=embed1)
         
