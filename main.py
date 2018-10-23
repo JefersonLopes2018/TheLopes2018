@@ -454,7 +454,7 @@ async def on_message(message):
 
     #Sistema_de_cargos
 
-     if message.content.lower().startswith("?perfil"):
+     if message.content.lower().startswith("?perfiloff"):
         
         embed1 =discord.Embed(
 
