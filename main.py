@@ -349,12 +349,15 @@ async def on_message(message):
    
 
      if message.content.lower().startswith('jarvis'):
+      try: 
        staff = client.get_channel("425150435725279253")
        sos = '<@&463052822175285268> vocês foram solitados por {}, em **{}**'.format(message.author.mention,message.server.name)
        javai = '{} Vou analisar sua duvida e lhe responder assim que possivel!'.format(message.author.mention)
        await client.send_message(staff, sos)
        await client.send_message(staff, message.content[7:])
        await client.send_message(message.channel, javai)
+      except:
+        await client.deletele_message(message)
       
         
         
