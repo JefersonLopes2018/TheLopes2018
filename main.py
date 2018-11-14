@@ -137,8 +137,8 @@ async def on_message(message):
 
      #em construção AFK
      
-     if "<@334359138110799872>sadasdsadasdasd" in message.content:
-      teste23 = await client.send_message(message.channel, "🔕**O TheLopes foi dormir, dia 14/11 ele volta!**")
+     if "<@334359138110799872>" in message.content:
+      teste23 = await client.send_message(message.channel, "🔕**O TheLopes Não irá mais jogar Hoje, ele voltará ás 12:00 de 14/11**")
       print ("ocupado")
 
         
