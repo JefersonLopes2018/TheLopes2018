@@ -250,7 +250,7 @@ async def on_message(message):
      
      
      if message.content.lower().startswith('?test'):
-        await client.send_message(message.channel, "**OPAH IRMÃO BELEZA?**)
+        await client.send_message(message.channel, "**OPAH IRMÃO BELEZA?**")
      
     
      
