@@ -148,7 +148,7 @@ async def on_message(message):
         
         
      if message.content.lower().startswith('?game'):
-      choice = random.randint(1, 6)
+      choice = random.randint(1, 9)
       if choice == 1:
          await client.send_message(message.channel, '**GTA**')
       if choice == 2:
@@ -161,7 +161,13 @@ async def on_message(message):
          await client.send_message(message.channel, '**GHOST RECON**')
       if choice == 6:
          await client.send_message(message.channel, '**DAUNTLESS**')
-    
+      if choice == 7:
+         await client.send_message(message.channel, '**Arma**')
+      if choice == 8:
+         await client.send_message(message.channel, '**Apex**')     
+      if choice == 9:
+         await client.send_message(message.channel, '**Overwatch**')    
+            
      #playlist
      if message.channel == client.get_channel('492158366622285835'):
        canalhe = client.get_channel("485118190473576460")
@@ -242,66 +248,112 @@ async def on_message(message):
         await client.send_message(canal, message.content[7:])
      
     
-     if message.content.lower().startswith("?menu"):
-       if not message.server.id == '343227251501957121': 
+     
+     if message.content.lower().startswith("?cargos"):
+       if not message.server.id == '343227251501957121':
            return await client.send_message(message.channel, "😬**Esse comando é privado!**")
        user = message.author
        server = message.server
        embedmenu = discord.Embed(
-         title='📌MENU',
+         title='📌MENU DE CARGOS',
          color=COR,
-         description='\n'
-                     '\n')
+         description='-Para adicionar um cargo de um dos jogos dentro do Servidor, basta digitar:\n'
+                     '\n'
+                     '** ``add + o nome do jogo`` **\n'
+                     '\n'
+                     '**Exemplo:**\n'
+                     '\n'
+                     '** ``addgta`` **'
+                     '\n'
+                     '\n'
+                     '🔰 Jogos Disponiveis ')
 
        embedmenu.set_thumbnail(url='https://cdn.discordapp.com/attachments/425141386266935296/485599235232890880/2055930_1.jpg')
 
-       embedmenu.add_field(name='🔰C1',value='🔰C2', inline=True)
-       embedmenu.add_field(name='🔫GTA',value='⚖️LOL', inline=True)
-       embedmenu.add_field(name='🔰C3',value='🔰C4 ', inline=True)
-       embedmenu.add_field(name='🏠FORTNITE',value='⚒UNTURNED', inline=True)
-       embedmenu.add_field(name='🔰C5',value='🔰C6', inline=True)
-       embedmenu.add_field(name='💣GHOST RECON', value='⚔️DAUNTLESS', inline=True)
 
-       embedmenu.set_footer(text="-Digite EXIT para fechar o menu")
+
+       embedmenu.set_footer(text=" Apex | Overwatch | Arma | Fortnite | League of Legends | Ghost Recon | Untuned | Dauntless | Gta ")
        resp = await client.send_message(message.channel, embed=embedmenu)
+       await client.delete_message(message)
+       await asyncio.sleep(30)
+       await client.delete_message(resp)
+
        msg1 = await client.wait_for_message(author=message.author, content='exit')
        await client.delete_message(resp)
-     if message.content.lower().startswith("c1"):
-      if not message.server.id == '343227251501957121': 
+
+
+
+     if message.content.lower().startswith("addgta"):
+      if not message.server.id == '343227251501957121':
         return await client.send_message(message.channel, "😬**Esse comando é privado!**")
       cargo1 = discord.utils.get(message.server.roles, name="GTA")
       await client.add_roles(message.author, cargo1)
+      await client.send_message(message.channel, "✔ Seu cargo foi adicionado com Sucesso!")
+      await client.delete_message(message)
 
-     if message.content.lower().startswith("c2"):
-      if not message.server.id == '343227251501957121': 
+     if message.content.lower().startswith("addlol"):
+      if not message.server.id == '343227251501957121':
         return await client.send_message(message.channel, "😬**Esse comando é privado!**")
       cargo2 = discord.utils.get(message.server.roles, name="LOL")
       await client.add_roles(message.author, cargo2)
+      await client.send_message(message.channel, "✔ Seu cargo foi adicionado com Sucesso!")
+      await client.delete_message(message)
 
-     if message.content.lower().startswith("c3"):
-      if not message.server.id == '343227251501957121': 
-       return await client.send_message(message.channel, "😬**Esse comando é privado!**")  
+     if message.content.lower().startswith("addfortnite"):
+      if not message.server.id == '343227251501957121':
+       return await client.send_message(message.channel, "😬**Esse comando é privado!**")
       cargo3 = discord.utils.get(message.server.roles, name="FORTNITE")
       await client.add_roles(message.author, cargo3)
+      await client.send_message(message.channel, "✔ Seu cargo foi adicionado com Sucesso!")
+      await client.delete_message(message)
 
-     if message.content.lower().startswith("c4"):
-      if not message.server.id == '343227251501957121': 
-        return await client.send_message(message.channel, "😬**Esse comando é privado!**")   
+     if message.content.lower().startswith("addunturned"):
+      if not message.server.id == '343227251501957121':
+        return await client.send_message(message.channel, "😬**Esse comando é privado!**")
       cargo4 = discord.utils.get(message.server.roles, name="Unturned")
       await client.add_roles(message.author, cargo4)
+      await client.send_message(message.channel, "✔ Seu cargo foi adicionado com Sucesso!")
+      await client.delete_message(message)
 
-     if message.content.lower().startswith("c5"):
-      if not message.server.id == '343227251501957121': 
+     if message.content.lower().startswith("addghostrecon"):
+      if not message.server.id == '343227251501957121':
         return await client.send_message(message.channel, "😬**Esse comando é privado!**")
       cargo5 = discord.utils.get(message.server.roles, name="Ghost Recon")
       await client.add_roles(message.author, cargo5)
+      await client.send_message(message.channel, "✔ Seu cargo foi adicionado com Sucesso!")
+      await client.delete_message(message)
 
-     if message.content.lower().startswith("c6"):
-      if not message.server.id == '343227251501957121': 
+     if message.content.lower().startswith("adddauntless"):
+      if not message.server.id == '343227251501957121':
         return await client.send_message(message.channel, "😬**Esse comando é privado!**")
       cargo6 = discord.utils.get(message.server.roles, name="Dautless")
-      await client.add_roles(message.author, cargo6)   
+      await client.add_roles(message.author, cargo6)
+      await client.send_message(message.channel, "✔ Seu cargo foi adicionado com Sucesso!")
+      await client.delete_message(message)
 
+     if message.content.lower().startswith("addarma"):
+      if not message.server.id == '343227251501957121':
+        return await client.send_message(message.channel, "😬**Esse comando é privado!**")
+      cargo7 = discord.utils.get(message.server.roles, name="Arma")
+      await client.add_roles(message.author, cargo7)
+      await client.send_message(message.channel, "✔ Seu cargo foi adicionado com Sucesso!")
+      await client.delete_message(message)
+
+    if message.content.lower().startswith("addapex"):
+     if not message.server.id == '343227251501957121':
+         return await client.send_message(message.channel, "😬**Esse comando é privado!**")
+     cargo8 = discord.utils.get(message.server.roles, name="Apex")
+     await client.add_roles(message.author, cargo8)
+     await client.send_message(message.channel, "✔ Seu cargo foi adicionado com Sucesso!")
+     await client.delete_message(message)
+
+    if message.content.lower().startswith("addoverwath"):
+     if not message.server.id == '343227251501957121':
+         return await client.send_message(message.channel, "😬**Esse comando é privado!**")
+     cargo9 = discord.utils.get(message.server.roles, name="Overwatch")
+     await client.add_roles(message.author, cargo9)
+     await client.send_message(message.channel, "✔ Seu cargo foi adicionado com Sucesso!")
+     await client.delete_message(message)
         
         
         
