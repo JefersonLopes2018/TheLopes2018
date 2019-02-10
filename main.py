@@ -141,7 +141,15 @@ async def on_message(message):
       teste23 = await client.send_message(message.channel, "🔕**O TheLopes está Ocupado**")
       print ("ocupado")
 
-        
+     if "<@423738913878966283>" in message.content:
+       embedjv = discord.Embed(
+         title='Estou aqui',
+         color=COR,
+         description='',)
+       embedjv.set_thumbnail(url=client.user.avatar_url)
+       teste = await client.send_message(message.channel, embed=embedjv)
+
+       print(teste)  
         
         
         
@@ -242,10 +250,7 @@ async def on_message(message):
      
      
      if message.content.lower().startswith('?test'):
-        if not message.server.id == '343227251501957121': 
-           return await client.send_message(message.channel, "**😬Esse comando é privado!**")
-        canal= client.get_channel("392746066555961345")
-        await client.send_message(canal, message.content[7:])
+        await client.send_message(message.channel, "**OPAH IRMÃO BELEZA?**)
      
     
      
@@ -347,8 +352,14 @@ async def on_message(message):
       await client.send_message(message.channel, "✔ Seu cargo foi adicionado com Sucesso!")
       await client.delete_message(message)
 
- 
-        
+     if message.content.lower().startswith("addoverwath"):
+      if not message.server.id == '343227251501957121':
+         return await client.send_message(message.channel, "😬**Esse comando é privado!**")
+      cargo9 = discord.utils.get(message.server.roles, name="Overwatch")
+      await client.add_roles(message.author, cargo9)
+      await client.send_message(message.channel, "✔ Seu cargo foi adicionado com Sucesso!")
+      await client.delete_message(message)
+         
         
         
         
