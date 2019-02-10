@@ -339,7 +339,13 @@ async def on_message(message):
       await client.send_message(message.channel, "✔ Seu cargo foi adicionado com Sucesso!")
       await client.delete_message(message)
 
-    
+     if message.content.lower().startswith("addapex"):
+      if not message.server.id == '343227251501957121':
+         return await client.send_message(message.channel, "😬**Esse comando é privado!**")
+      cargo8 = discord.utils.get(message.server.roles, name="Apex")
+      await client.add_roles(message.author, cargo8)
+      await client.send_message(message.channel, "✔ Seu cargo foi adicionado com Sucesso!")
+      await client.delete_message(message)
 
  
         
