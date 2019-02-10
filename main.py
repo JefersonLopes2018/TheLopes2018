@@ -97,7 +97,7 @@ async def on_message(message):
          embedinfo.add_field(name='?game',value='Escolhe um jogo da lista do F SOCIETY.',inline=False)
          embedinfo.add_field(name='?moeda',value='Joga uma moeda.',inline=False)
          embedinfo.add_field(name='?convite',value='Mostra o convite do F SOCIETY', inline=False)
-         embedinfo.add_field(name='?menu',value='Abre o menu para definir seus cargos', inline=False)
+         embedinfo.add_field(name='?cargos',value='Abre o menu para definir seus cargos', inline=False)
         
          
       
@@ -403,7 +403,12 @@ async def on_message(message):
          return await client.send_message(message.channel, "😬**Você Não tem permissão!**")
        await client.send_message(avisos, message.content[8:])
        await client.delete_message(message)  
-   
+     if message.content.lower().startswith('?society'):
+       society= client.get_channel("393451272034058241")
+       if not message.author.id == '334359138110799872':
+         return await client.send_message(message.channel, "😬**Você Não tem permissão!**")
+       await client.send_message(avisos, message.content[8:])
+       await client.delete_message(message) 
 
      if message.content.lower().startswith('jarvis'):
       try: 
