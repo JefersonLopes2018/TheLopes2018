@@ -407,7 +407,7 @@ async def on_message(message):
        society= client.get_channel("393451272034058241")
        if not message.author.id == '334359138110799872':
          return await client.send_message(message.channel, "😬**Você Não tem permissão!**")
-       await client.send_message(society, message.content[8:])
+       await client.send_message(society, message.content[9:])
        await client.delete_message(message) 
 
      if message.content.lower().startswith('jarvis'):
