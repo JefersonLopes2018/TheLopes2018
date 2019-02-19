@@ -253,7 +253,7 @@ async def on_message(message):
        Servercoruja= client.get_channel("534655143082196993")
        if not message.author.id == '334359138110799872':
          return await client.send_message(message.channel, "😬**Você Não tem permissão!**")
-       await client.send_message(avisos, message.content[6:])
+       await client.send_message(Servercoruja, message.content[6:])
        await client.delete_message(message)  
      
     
