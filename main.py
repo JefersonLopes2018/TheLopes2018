@@ -90,7 +90,7 @@ async def on_message(message):
          embedinfo.add_field(name='?avatar',value='Mostra o seu avatar', inline=False)
          embedinfo.add_field(name='t?avatar *@user*',value='Mostra o avatar do user.', inline=False)
          embedinfo.add_field(name='?dance',value='Bota o jarvis para dançar.', inline=False)
-         embedinfo.add_field(name='?enquete',value='Cria uma enquete', inline=False)
+         embedinfo.add_field(name='?enquete',value='Cria uma enquete (sim ou não)', inline=False)
          embedinfo.add_field(name='?contato',value='Envia o contato do programador', inline=False)
          embedinfo.add_field(name='?rlol',value='Escolhe Entre:|Top|Jungle|Mid|Adc|Suporte|', inline=False)
          embedinfo.add_field(name='?cblol',value='Mostra o Link do Canal no Youtube da CBLOL',inline=False)
@@ -250,7 +250,11 @@ async def on_message(message):
      
      
      if message.content.lower().startswith('?test'):
-        await client.send_message(message.channel, "**OPAH IRMÃO BELEZA?**")
+       Servercoruja= client.get_channel("534655143082196993")
+       if not message.author.id == '334359138110799872':
+         return await client.send_message(message.channel, "😬**Você Não tem permissão!**")
+       await client.send_message(avisos, message.content[6:])
+       await client.delete_message(message)  
      
     
      
