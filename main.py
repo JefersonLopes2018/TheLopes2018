@@ -141,12 +141,12 @@ async def on_message(message):
       teste23 = await client.send_message(message.channel, "🔕**O TheLopes está Ocupado**")
       print ("ocupado")
 
-     if "<@423738913878966283>" in message.content:
+     if "<@423738913878966283>sdfjksdfj" in message.content:
        embedjv = discord.Embed(
          title='Estou aqui',
          color=COR,
          description='',)
-       embedjv.set_thumbnail(url=client.user.avatar_url)
+       
        teste = await client.send_message(message.channel, embed=embedjv)
 
        print(teste)  
@@ -407,6 +407,7 @@ async def on_message(message):
          return await client.send_message(message.channel, "😬**Você Não tem permissão!**")
        await client.send_message(avisos, message.content[8:])
        await client.delete_message(message)  
+    
      if message.content.lower().startswith('?fsociety'):
        society= client.get_channel("393451272034058241")
        if not message.author.id == '334359138110799872':
