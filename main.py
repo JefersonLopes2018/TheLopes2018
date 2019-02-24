@@ -458,7 +458,7 @@ async def on_message(message):
             await client.send_message(message.channel, ' ```Suporte``` ') 
         
      #gui
-     if message.content.lower().startswith('?gui'):
+     if message.content.lower().startswith('?guilherme'):
         link2 = 'https://www.twitch.tv/zerefinho3'
         embedgui = discord.Embed(
          title='Guilherme na Twitch',
@@ -466,7 +466,7 @@ async def on_message(message):
          description= "\n"
             "[Clique aqui]("+ link2 +") Para acessar o Canal na Twitch!\n")   
         
-        embedcblol.set_thumbnail(url='https://cdn.discordapp.com/attachments/425141386266935296/549085202442616837/1.png')
+        embedgui.set_thumbnail(url='https://cdn.discordapp.com/attachments/425141386266935296/549085202442616837/1.png')
         await client.send_message(message.channel, embed=embedgui)
         await client.delete_message(message)
    
