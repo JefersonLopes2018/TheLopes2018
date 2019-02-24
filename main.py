@@ -457,8 +457,19 @@ async def on_message(message):
         if choice == 5:
             await client.send_message(message.channel, ' ```Suporte``` ') 
         
+     #gui
+     if message.content.lower().startswith('?Gui'):
+        link2 = 'https://www.twitch.tv/zerefinho3'
+        embedgui = discord.Embed(
+         title='Guilherme na Twitch',
+         color=COR,
+         description= "\n"
+            "[Clique aqui]("+ link2 +") Para acessar o Canal na Twitch!\n")   
         
-        
+        embedcblol.set_thumbnail(url='https://images-ext-1.discordapp.net/external/H-B5siXtDZFusOK9S5c9HAK5tHCR7G02RYNTHNH2p4E/https/static-cdn.jtvnw.net/jtv_user_pictures/abb8b667-cfbc-494e-b435-5f4cdb65f0c4-profile_image-300x300.png?width=270&height=270')
+        await client.send_message(message.channel, embed=embedgui)
+        await client.delete_message(message)
+   
      #Banco_de_dados
   
        
