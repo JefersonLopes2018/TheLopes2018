@@ -258,7 +258,8 @@ async def on_message(message):
        await client.delete_message(message)  
      
     
-     
+     #sistemas_de_Cargos
+        
      if message.content.lower().startswith("?cargos"):
        if not message.server.id == '343227251501957121':
            return await client.send_message(message.channel, "😬**Esse comando é privado!**")
@@ -368,6 +369,7 @@ async def on_message(message):
         
         
         
+        
         #contato
         
      if message.content.lower().startswith("?contato"):
@@ -391,6 +393,7 @@ async def on_message(message):
         
         
         
+        
      #sistema_de_controle(mensagem)
         
      if message.content.lower().startswith('?diz'):
@@ -402,6 +405,7 @@ async def on_message(message):
       except:
        await client.delete_message(message)
         
+        
      if message.content.lower().startswith('?avisos'):
        avisos= client.get_channel("392711722172940298")
        if not message.author.id == '334359138110799872':
@@ -409,13 +413,21 @@ async def on_message(message):
        await client.send_message(avisos, message.content[8:])
        await client.delete_message(message)  
     
+    
      if message.content.lower().startswith('?fsociety'):
        society= client.get_channel("393451272034058241")
        if not message.author.id == '334359138110799872':
          return await client.send_message(message.channel, "😬**Você Não tem permissão!**")
        await client.send_message(society, message.content[9:])
        await client.delete_message(message) 
-
+    
+     if message.content.lower().startswith('?gui'):
+       gui2= client.get_channel("501491351641391114")
+       if not message.author.id == '334359138110799872':
+         return await client.send_message(message.channel, "😬**Você Não tem permissão!**")
+       await client.send_message(gui2, message.content[4:])
+       await client.delete_message(message)
+    
      if message.content.lower().startswith('jarvis'):
       try: 
        staff = client.get_channel("425150435725279253")
