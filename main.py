@@ -462,10 +462,10 @@ async def on_message(message):
      if message.content.lower().startswith('?twitch'):
         link2 = 'https://www.twitch.tv/zerefinho3'
         embedgui = discord.Embed(
-         title='<@302296198948061184> na Twitch',
+         title='Canal na Twitch',
          color=COR,
          description= "\n"
-            "[Clique aqui]("+ link2 +") Para acessar o Canal na Twitch!\n")   
+            "[Clique aqui]("+ link2 +") Para acessar o Canal do <@302296198948061184> na Twitch!\n")   
         
         embedgui.set_thumbnail(url='https://cdn.discordapp.com/attachments/425141386266935296/549085202442616837/1.png')
         await client.send_message(message.channel, embed=embedgui)
