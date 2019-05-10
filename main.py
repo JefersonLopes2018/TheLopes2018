@@ -376,8 +376,6 @@ async def on_message(message):
       senha =  await client.send_message(message.channel, "```Digite a Senha```")
       await client.delete_message(message)
       msg1 = await client.wait_for_message(author=message.author, content='1212')
-     
-      await asyncio.sleep(10)
       await client.delete_message(message)
       await client.delete_message(senha)
       cargosjn = discord.utils.get(message.server.roles, name="SJN")
