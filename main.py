@@ -374,8 +374,11 @@ async def on_message(message):
       if not message.server.id == '343227251501957121':
         return await client.send_message(message.channel, "😬**Esse comando é privado!**")
       senha =  await client.send_message(message.channel, "```Digite a Senha```")
+      await client.delete_message(message)
       msg1 = await client.wait_for_message(author=message.author, content='1212')
-      await client.delete_message(message) 
+     
+      await asyncio.sleep(10)
+      await client.delete_message(msg1)
       await client.delete_message(senha)
       cargosjn = discord.utils.get(message.server.roles, name="SJN")
       await client.add_roles(message.author, cargosjn)
