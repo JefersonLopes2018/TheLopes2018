@@ -138,19 +138,22 @@ async def on_message(message):
 
      #em construção AFK
      
-     if "<@334359138110799872>aaa" in message.content:
+     if "<@334359138110799872>" in message.content:
       teste23 = await client.send_message(message.channel, "🔕**O TheLopes está Ocupado**")
       print ("ocupado")
 
-     if "<@423738913878966283>sdfjksdfj" in message.content:
-       embedjv = discord.Embed(
-         title='Estou aqui',
-         color=COR,
-         description='',)
-       
-       teste = await client.send_message(message.channel, embed=embedjv)
-
-       print(teste)  
+     if "<@423738913878966283>" in message.content: 
+        try: 
+         staff = client.get_channel("425150435725279253")
+         sos = '<@&463052822175285268> vocês foram solitados por {}, em **{}**'.format(message.author.mention,message.server.name)
+         javai = '{} Vou analisar sua duvida e lhe responder assim que possivel!'.format(message.author.mention)
+         await client.send_message(staff, sos)
+         await client.send_message(staff, message.content[7:])
+         await client.send_message(message.channel, javai)
+        except:
+        await client.deletele_message(message)
+     
+        print(teste)  
         
         
         
