@@ -140,8 +140,8 @@ async def on_message(message):
      
      if "<@334359138110799872>" in message.content:
       teste23 = await client.send_message(message.channel, "🔕**O TheLopes está Ocupado**")
-      teste24 = await client.send_message(message.channel, "Assistindo **Lucifer** ")
-      teste25 = await client.send_message(message.channel, "Se for importante me mencioana!!")
+      teste24 = await client.send_message(message.channel, "🤣Assistindo **Lucifer** ")
+      teste25 = await client.send_message(message.channel, "🥰Se for importante me menciona!! ;)")
       print ("ocupado")
 
      if "<@423738913878966283>" in message.content: 
