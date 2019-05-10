@@ -373,9 +373,11 @@ async def on_message(message):
      if message.content.lower().startswith("addsjn"):
       if not message.server.id == '343227251501957121':
         return await client.send_message(message.channel, "😬**Esse comando é privado!**")
-      await client.send_message(message.channel, "Digite a Senha")
+      senha =  await client.send_message(message.channel, "```Digite a Senha```")
+      await asyncio.sleep(30)
+      await client.delete_message(senha)
       msg1 = await client.wait_for_message(author=message.author, content='1212')
-      cargosjn = discord.utils.get(message.server.roles, name="GTA")
+      cargosjn = discord.utils.get(message.server.roles, name="SJN")
       await client.add_roles(message.author, cargosjn)
       await client.send_message(message.channel, "✔ Seu cargo foi adicionado com Sucesso!")
       await client.delete_message(message)    
