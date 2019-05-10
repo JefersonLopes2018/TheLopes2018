@@ -151,7 +151,7 @@ async def on_message(message):
          await client.send_message(staff, message.content[7:])
          await client.send_message(message.channel, javai)
         except:
-        await client.deletele_message(message)
+         await client.deletele_message(message)
      
         print(teste)  
         
