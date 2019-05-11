@@ -34,7 +34,7 @@ async def on_member_join(member):
   regras = client.get_channel("424026852097654794")
   bots = client.get_channel("392697933562118144")
   msg = "Bem Vindo {}\n leia as {}".format(member.mention, regras.mention)
-  msg2 = "Olá {},Esse é o canal de Chat, Para liberar Outras salas digite ** ``?menu`` ** em {}".format(member.mention, bots.mention) 
+  msg2 = "Olá {}, Esse é o canal de Chat, Para liberar Outras salas digite ** ``?cargos`` ** em {}".format(member.mention, bots.mention) 
   await client.send_message(member, msg) #substitua canal por member para enviar a msg no DM do membro
   await client.send_message(canal, msg2)
 @client.event
@@ -138,10 +138,9 @@ async def on_message(message):
 
      #em construção AFK
      
-     if "<@334359138110799872>" in message.content:
+     if "<@334359138110799872>a" in message.content:
       teste23 = await client.send_message(message.channel, "🔕**O TheLopes está Ocupado**")
-      teste24 = await client.send_message(message.channel, "🤣Assistindo **Lucifer** ")
-      teste25 = await client.send_message(message.channel, "🥰Se for importante me menciona!! ;)")
+ 
       print ("ocupado")
 
      if "<@423738913878966283>" in message.content: 
