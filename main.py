@@ -141,7 +141,7 @@ async def on_message(message):
      if "<@334359138110799872>a" in message.content:
       teste23 = await client.send_message(message.channel, "🔕**O TheLopes está Ocupado**")
  
-      print ("ocupado")
+      print ("ocupado!")
 
      if "<@423738913878966283>" in message.content: 
      
