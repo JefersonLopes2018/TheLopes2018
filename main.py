@@ -48,9 +48,9 @@ async def on_member_remove(member):
     
 @client.event
 async def on_message(message):
-     if not "463052822175285268" in [role.id for role in message.author.roles]:
      
-       if message.content.lower().startswith('?delete'):
+     
+     if message.content.lower().startswith('?delete'):
           qntdd = message.content.strip('?delete ')
           qntdd = toint(qntdd)
           if qntdd <= 100:
