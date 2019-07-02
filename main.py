@@ -49,7 +49,7 @@ async def on_member_remove(member):
 @client.event
 async def on_message(message):
 
-     if  message.author.id == '334359138110799872':
+     if not "463052822175285268" in [role.id for role in message.author.roles]:
 
        if message.content.lower().startswith('?delete'):
           qntdd = message.content.strip('?delete ')
@@ -412,7 +412,7 @@ async def on_message(message):
      if message.content.lower().startswith('?diz'):
       try:
        if not "463052822175285268" in [role.id for role in message.author.roles]:
-         return await client.send_message(message.channel, "```Você Não tem permissão!```")
+         return await client.send_message(message.channel, "😬**Você Não tem permissão!**")
        await client.send_message(message.channel, message.content[4:])
        await client.delete_message(message)
       except:
@@ -421,7 +421,7 @@ async def on_message(message):
         
      if message.content.lower().startswith('?avisos'):
        avisos= client.get_channel("392711722172940298")
-       if not message.author.id == '334359138110799872':
+       if not "463052822175285268" in [role.id for role in message.author.roles]:
          return await client.send_message(message.channel, "😬**Você Não tem permissão!**")
        await client.send_message(avisos, message.content[8:])
        await client.delete_message(message)  
@@ -429,7 +429,7 @@ async def on_message(message):
     
      if message.content.lower().startswith('?fsociety'):
        society= client.get_channel("393451272034058241")
-       if not message.author.id == '334359138110799872':
+       if not "463052822175285268" in [role.id for role in message.author.roles]:
          return await client.send_message(message.channel, "😬**Você Não tem permissão!**")
        await client.send_message(society, message.content[9:])
        await client.delete_message(message) 
