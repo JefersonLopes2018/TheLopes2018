@@ -411,7 +411,7 @@ async def on_message(message):
         
      if message.content.lower().startswith('?diz'):
       try:
-       if not message.author.id == '334359138110799872':
+       if not 463052822175285268 in [role.id for role in message.author.roles]:
          return await client.send_message(message.channel, "```Você Não tem permissão!```")
        await client.send_message(message.channel, message.content[4:])
        await client.delete_message(message)
