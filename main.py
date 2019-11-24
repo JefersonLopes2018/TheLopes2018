@@ -252,12 +252,7 @@ async def on_message(message):
         #jarvis_online
      
      
-     if message.content.lower().startswith('?luis'):
-       serverluis= client.get_channel("647669743678914560")
-       if not message.author.id == '334359138110799872':
-         return await client.send_message(message.channel, "😬**Você Não tem permissão!**")
-       await client.send_message(serverluis, message.content[6:])
-       await client.delete_message(message)  
+       
      
     
      #sistemas_de_Cargos
