@@ -549,82 +549,12 @@ async def on_message(message):
         
       
         
-        
-   
-
-    #Sistema_de_cargos
-
-     if message.content.lower().startswith("?perfiloff"):
-        
-        embed1 =discord.Embed(
-
-           title="Defina seu Perfil!",
-           color=COR,
-           description="-ESSE COMANDO FOI DESATIVADO!",)
-                   
-             
-        botmsg = await client.send_message(message.channel, embed=embed1)
-        
-        await client.add_reaction(botmsg, "🔫")
-        await client.add_reaction(botmsg, "⚔")
-        await client.add_reaction(botmsg, "🛡")
-        await client.add_reaction(botmsg, "🛠")
-
-        global msg_id
-        msg_id = botmsg.id
-        global msg_user
-        msg_user = message.author
-
-@client.event
-async def on_reaction_add(reaction, user):
-    msg = reaction.message
-
-    if reaction.emoji == "🔫": 
-     role = discord.utils.find(lambda r: r.name == "GTA", msg.server.roles)
-     await client.add_roles(user, role)
-     print("add")
-
-    if reaction.emoji == "⚔":
-     role = discord.utils.find(lambda r: r.name == "LOL", msg.server.roles)
-     await client.add_roles(user, role)
-     print("add")
-
-    if reaction.emoji == "🛡":
-     role = discord.utils.find(lambda r: r.name == "FORTNITE", msg.server.roles)
-     await client.add_roles(user, role)
-     print("add")
-
-    if reaction.emoji == "🛠" :
-     role = discord.utils.find(lambda r: r.name == "Unturned", msg.server.roles)
-     await client.add_roles(user, role)
-     print("add")
+     
 
 
 
 
 
-@client.event
-async def on_reaction_remove(reaction, user):
-    msg = reaction.message
-
-    if reaction.emoji == "🔫":
-     role = discord.utils.find(lambda r: r.name == "GTA", msg.server.roles)
-     await client.remove_roles(user, role)
-     print("remove")
-
-    if reaction.emoji == "⚔":
-     role = discord.utils.find(lambda r: r.name == "LOL", msg.server.roles)
-     await client.remove_roles(user, role)
-     print("remove")
-
-    if reaction.emoji == "🛡":
-     role = discord.utils.find(lambda r: r.name == "FORTNITE", msg.server.roles)
-     await client.remove_roles(user,role)
-
-    if reaction.emoji == "🛠":
-     role = discord.utils.find(lambda r: r.name == "Unturned", msg.server.roles)
-     await client.remove_roles(user, role)
-     print("add")
 
 
 
