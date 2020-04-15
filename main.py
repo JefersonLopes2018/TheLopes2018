@@ -26,7 +26,7 @@ async def on_ready():
     print('BOT ONLINE - Olá Mundo!')
     print(client.user.name)
     print(client.user.id)
-    print('-----TheLopes-----')
+    print('------TheLopes------')
 
 @client.event
 async def on_member_join(member):
