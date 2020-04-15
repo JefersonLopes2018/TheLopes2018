@@ -558,4 +558,4 @@ async def on_message(message):
 
 
 
-client.run('NDIzNzM4OTEzODc4OTY2Mjgz.XpaL5A.aIt8cSsl5R6OmDWuSMPcQC0CX2I')
+client.run('NDI1MzQ4Nzc5NzA5ODI1MDI2.XpaMQQ.96MkrdQXhr8EBkDxjPSIE5NgUF8')
